@@ -22,6 +22,7 @@ let PodHoldersController = class PodHoldersController {
         this.service = service;
     }
     create(dto) {
+        console.log('BODY RECEIVED >>>', dto);
         return this.service.create(dto);
     }
     findAll() {

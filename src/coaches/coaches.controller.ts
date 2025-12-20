@@ -23,6 +23,7 @@ export class CoachesController {
   @Roles('CLUB_ADMIN')
   @Post()
   async create(@Req() req: any, @Body() dto: CreateCoachDto) {
+    console.log('JWT USER PAYLOAD:', req.user);
     const club_id = req.user?.club_id;
 
     if (!club_id) {
@@ -42,6 +43,7 @@ export class CoachesController {
   @Roles('CLUB_ADMIN')
   @Get('my-club')
   async getMyClubCoaches(@Req() req: any) {
+    console.log('JWT USER PAYLOAD:', req.user);
     const club_id = req.user?.club_id;
 
     if (!club_id) {

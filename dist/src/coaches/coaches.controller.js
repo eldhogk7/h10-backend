@@ -25,6 +25,7 @@ let CoachesController = class CoachesController {
         this.svc = svc;
     }
     async create(req, dto) {
+        console.log('JWT USER PAYLOAD:', req.user);
         const club_id = req.user?.club_id;
         if (!club_id) {
             throw new common_1.BadRequestException('club_id missing in token. Please logout and login again.');
@@ -35,6 +36,7 @@ let CoachesController = class CoachesController {
         });
     }
     async getMyClubCoaches(req) {
+        console.log('JWT USER PAYLOAD:', req.user);
         const club_id = req.user?.club_id;
         if (!club_id) {
             throw new common_1.BadRequestException('club_id missing in token');

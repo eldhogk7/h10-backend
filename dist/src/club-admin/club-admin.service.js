@@ -30,6 +30,16 @@ let ClubAdminService = class ClubAdminService {
             },
         });
     }
+    async updateByClubId(club_id, dto) {
+        return this.prisma.clubAdmin.updateMany({
+            where: { club_id },
+            data: {
+                name: dto.name,
+                email: dto.email,
+                phone: dto.phone,
+            },
+        });
+    }
     findAll() {
         return this.prisma.clubAdmin.findMany();
     }

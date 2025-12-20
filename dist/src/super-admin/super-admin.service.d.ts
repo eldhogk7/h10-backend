@@ -10,12 +10,12 @@ export declare class SuperAdminService {
         phone: string | null;
         password_hash: string;
         profile_image: string | null;
+        created_at: Date;
+        updated_at: Date;
         reset_token: string | null;
         reset_token_expires: Date | null;
         login_otp: string | null;
         login_otp_expires: Date | null;
-        created_at: Date;
-        updated_at: Date;
     }>;
     findAll(): Promise<{
         super_admin_id: string;
@@ -24,12 +24,12 @@ export declare class SuperAdminService {
         phone: string | null;
         password_hash: string;
         profile_image: string | null;
+        created_at: Date;
+        updated_at: Date;
         reset_token: string | null;
         reset_token_expires: Date | null;
         login_otp: string | null;
         login_otp_expires: Date | null;
-        created_at: Date;
-        updated_at: Date;
     }[]>;
     findOne(id: string): Promise<{
         super_admin_id: string;
@@ -38,12 +38,12 @@ export declare class SuperAdminService {
         phone: string | null;
         password_hash: string;
         profile_image: string | null;
+        created_at: Date;
+        updated_at: Date;
         reset_token: string | null;
         reset_token_expires: Date | null;
         login_otp: string | null;
         login_otp_expires: Date | null;
-        created_at: Date;
-        updated_at: Date;
     } | null>;
     updateProfileImage(id: string, filename: string): Promise<{
         super_admin_id: string;
@@ -52,12 +52,12 @@ export declare class SuperAdminService {
         phone: string | null;
         password_hash: string;
         profile_image: string | null;
+        created_at: Date;
+        updated_at: Date;
         reset_token: string | null;
         reset_token_expires: Date | null;
         login_otp: string | null;
         login_otp_expires: Date | null;
-        created_at: Date;
-        updated_at: Date;
     }>;
     updateProfile(id: string, dto: UpdateSuperAdminDto): Promise<{
         super_admin_id: string;
@@ -66,11 +66,11 @@ export declare class SuperAdminService {
         phone: string | null;
         password_hash: string;
         profile_image: string | null;
+        created_at: Date;
+        updated_at: Date;
         reset_token: string | null;
         reset_token_expires: Date | null;
         login_otp: string | null;
         login_otp_expires: Date | null;
-        created_at: Date;
-        updated_at: Date;
     }>;
 }

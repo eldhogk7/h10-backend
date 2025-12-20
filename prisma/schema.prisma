@@ -7,9 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//
-// SUPER ADMINS
-//
 model SuperAdmin {
   super_admin_id      String    @id @default(uuid()) @db.Uuid
   name                String?
@@ -17,52 +14,39 @@ model SuperAdmin {
   phone               String?
   password_hash       String
   profile_image       String?
+  created_at          DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime  @updatedAt @db.Timestamptz(6)
   reset_token         String?   @db.VarChar(255)
   reset_token_expires DateTime? @db.Timestamptz(6)
-
-  // OTP / login verification fields
-  login_otp         String?   @db.VarChar(32)
-  login_otp_expires DateTime? @db.Timestamptz(6)
-
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @updatedAt @db.Timestamptz(6)
-
-  // opposite relation for Club.super_admin
-  clubs Club[] @relation("superadmin_clubs")
+  login_otp           String?   @db.VarChar(32)
+  login_otp_expires   DateTime? @db.Timestamptz(6)
+  clubs               Club[]    @relation("superadmin_clubs")
 
   @@map("super_admins")
 }
 
-//
-// CLUBS
-//
 model Club {
-  club_id        String   @id @default(uuid()) @db.Uuid
-  super_admin_id String?  @db.Uuid
-  club_name      String?
-  address        String?
-  sport          String?
-  status         String?  @default("active")
-  created_at     DateTime @default(now()) @db.Timestamptz(6)
-  updated_at     DateTime @default(now()) @db.Timestamptz(6)
-
-  // relation to SuperAdmin (optional)
-  super_admin SuperAdmin? @relation("superadmin_clubs", fields: [super_admin_id], references: [super_admin_id], onDelete: SetNull)
-
-  // one-to-many children
+  club_id         String           @id @default(uuid()) @db.Uuid
+  super_admin_id  String?          @db.Uuid
+  club_name       String?
+  address         String?
+  status          String?          @default("active")
+  created_at      DateTime         @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime         @default(now()) @db.Timestamptz(6)
+  sport           String?
+  pod_holder_id   String?          @db.Uuid
   club_admins     ClubAdmin[]
+  super_admin     SuperAdmin?      @relation("superadmin_clubs", fields: [super_admin_id], references: [super_admin_id])
+  pod_holder      PodHolder?       @relation(fields: [pod_holder_id], references: [pod_holder_id], onUpdate: NoAction, map: "fk_clubs_pod_holder")
   coaches         Coach[]
-  players         Player[]
   events          Event[]
-  subscriptions   Subscription[]
+  players         Player[]
   serviceRequests ServiceRequest[]
+  subscriptions   Subscription[]
 
   @@map("clubs")
 }
 
-//
-// CLUB ADMINS
-//
 model ClubAdmin {
   admin_id            String    @id @default(uuid()) @db.Uuid
   club_id             String    @db.Uuid
@@ -71,96 +55,73 @@ model ClubAdmin {
   email               String?   @unique
   password_hash       String?
   profile_image       String?
+  created_at          DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime  @default(now()) @db.Timestamptz(6)
   reset_token         String?   @db.VarChar(255)
   reset_token_expires DateTime? @db.Timestamptz(6)
-
-  // OTP / login verification fields
-  login_otp         String?   @db.VarChar(32)
-  login_otp_expires DateTime? @db.Timestamptz(6)
-
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @default(now()) @db.Timestamptz(6)
-
-  // club relation: club_id is non-nullable so relation is required
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  login_otp           String?   @db.VarChar(32)
+  login_otp_expires   DateTime? @db.Timestamptz(6)
+  club                Club      @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
 
   @@map("club_admins")
 }
 
-//
-// COACHES
-//
 model Coach {
-  coach_id            String    @id @default(uuid()) @db.Uuid
-  club_id             String    @db.Uuid
+  coach_id            String             @id @default(uuid()) @db.Uuid
+  club_id             String             @db.Uuid
   coach_name          String?
   phone               String?
-  email               String?   @unique
+  email               String?            @unique
   password_hash       String?
   role                String?
   coach_image         String?
   location            String?
-  reset_token         String?   @db.VarChar(255)
-  reset_token_expires DateTime? @db.Timestamptz(6)
-
-  // OTP / login verification fields
-  login_otp         String?   @db.VarChar(32)
-  login_otp_expires DateTime? @db.Timestamptz(6)
-
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @default(now()) @db.Timestamptz(6)
-
-  // club relation: club_id non-nullable so make relation required
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
-
-  // relation arrays
-  pod_allocations    PodAllocation[]
-  coach_assignments  CoachAssignment[]
-  event_participants EventParticipant[]
+  created_at          DateTime           @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime           @default(now()) @db.Timestamptz(6)
+  reset_token         String?            @db.VarChar(255)
+  reset_token_expires DateTime?          @db.Timestamptz(6)
+  login_otp           String?            @db.VarChar(32)
+  login_otp_expires   DateTime?          @db.Timestamptz(6)
+  coach_assignments   CoachAssignment[]
+  club                Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  event_participants  EventParticipant[]
+  pod_allocations     PodAllocation[]
 
   @@map("coaches")
 }
 
-//
-// PLAYERS
-//
 model Player {
-  player_id     String   @id @default(uuid()) @db.Uuid
-  club_id       String   @db.Uuid
-  player_name   String?
-  jersey_number Int?
-  age           Int?
-  position      String?
-  phone         String?
-  player_image  String?
-  created_at    DateTime @default(now()) @db.Timestamptz(6)
-  updated_at    DateTime @default(now()) @db.Timestamptz(6)
-
-  club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
-  coach_assignments  CoachAssignment[]
-  player_pods        PlayerPod[]
-  player_pod_holders PlayerPodHolder[]
-  raw_data           RawData[]
-  event_participants EventParticipant[]
+  player_id          String             @id @default(uuid()) @db.Uuid
+  club_id            String             @db.Uuid
+  player_name        String?
+  jersey_number      Int?
+  age                Int?
+  position           String?
+  phone              String?
+  player_image       String?
+  created_at         DateTime           @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime           @default(now()) @db.Timestamptz(6)
   activity_metrics   ActivityMetric[]
+  coach_assignments  CoachAssignment[]
+  event_participants EventParticipant[]
+  player_pod_holders PlayerPodHolder[]
+  player_pods        PlayerPod[]
+  club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  raw_data           RawData[]
 
   @@map("players")
 }
 
-//
-// PODS
-//
 model Pod {
-  pod_id        String   @id @default(uuid()) @db.Uuid
-  serial_number String?  @unique
-  model         String?
-  firmware      String?
-  created_at    DateTime @default(now()) @db.Timestamptz(6)
-  updated_at    DateTime @default(now()) @db.Timestamptz(6)
-
-  pod_allocations   PodAllocation[]
+  pod_id            String            @id @default(uuid()) @db.Uuid
+  serial_number     String?           @unique
+  model             String?
+  firmware          String?
+  created_at        DateTime          @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime          @default(now()) @db.Timestamptz(6)
   coach_assignments CoachAssignment[]
   player_pods       PlayerPod[]
+  pod_allocations   PodAllocation[]
   pod_statuses      PodStatus[]
   raw_data          RawData[]
 
@@ -168,12 +129,12 @@ model Pod {
 }
 
 model PodHolder {
-  pod_holder_id String   @id @default(uuid()) @db.Uuid
-  serial_number String?  @unique
-  model         String?
-  created_at    DateTime @default(now()) @db.Timestamptz(6)
-  updated_at    DateTime @default(now()) @db.Timestamptz(6)
-
+  pod_holder_id       String            @id @default(uuid()) @db.Uuid
+  serial_number       String?           @unique
+  model               String?
+  created_at          DateTime          @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime          @default(now()) @db.Timestamptz(6)
+  clubs               Club[]
   coach_assignments   CoachAssignment[]
   player_pod_holders  PlayerPodHolder[]
   pod_holder_statuses PodHolderStatus[]
@@ -188,10 +149,8 @@ model PodAllocation {
   battery_level Int?
   health_status String?
   assigned_at   DateTime @default(now()) @db.Timestamptz(6)
-
-  // coach is optional (SetNull) — fine if pod is unassigned
-  coach Coach? @relation(fields: [coach_id], references: [coach_id], onDelete: SetNull)
-  pod   Pod    @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
+  coach         Coach?   @relation(fields: [coach_id], references: [coach_id])
+  pod           Pod      @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
   @@index([coach_id])
   @@index([pod_id])
@@ -199,17 +158,16 @@ model PodAllocation {
 }
 
 model CoachAssignment {
-  assignment_id String   @id @default(uuid()) @db.Uuid
-  coach_id      String?  @db.Uuid
-  pod_id        String?  @db.Uuid
-  pod_holder_id String?  @db.Uuid
-  player_id     String?  @db.Uuid
-  assigned_at   DateTime @default(now()) @db.Timestamptz(6)
-
-  coach      Coach?     @relation(fields: [coach_id], references: [coach_id], onDelete: Cascade)
-  pod        Pod?       @relation(fields: [pod_id], references: [pod_id])
-  pod_holder PodHolder? @relation(fields: [pod_holder_id], references: [pod_holder_id])
-  player     Player?    @relation(fields: [player_id], references: [player_id])
+  assignment_id String     @id @default(uuid()) @db.Uuid
+  coach_id      String?    @db.Uuid
+  pod_id        String?    @db.Uuid
+  pod_holder_id String?    @db.Uuid
+  player_id     String?    @db.Uuid
+  assigned_at   DateTime   @default(now()) @db.Timestamptz(6)
+  coach         Coach?     @relation(fields: [coach_id], references: [coach_id], onDelete: Cascade)
+  player        Player?    @relation(fields: [player_id], references: [player_id])
+  pod_holder    PodHolder? @relation(fields: [pod_holder_id], references: [pod_holder_id])
+  pod           Pod?       @relation(fields: [pod_id], references: [pod_id])
 
   @@index([coach_id])
   @@index([player_id])
@@ -221,9 +179,8 @@ model PlayerPod {
   player_id     String   @db.Uuid
   pod_id        String   @db.Uuid
   assigned_date DateTime @default(now()) @db.Timestamptz(6)
-
-  player Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
-  pod    Pod    @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
+  player        Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  pod           Pod      @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
   @@index([player_id])
   @@index([pod_id])
@@ -231,13 +188,12 @@ model PlayerPod {
 }
 
 model PlayerPodHolder {
-  id            String   @id @default(uuid()) @db.Uuid
-  player_id     String   @db.Uuid
-  pod_holder_id String   @db.Uuid
-  assigned_date DateTime @default(now()) @db.Timestamptz(6)
-
-  player     Player    @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
-  pod_holder PodHolder @relation(fields: [pod_holder_id], references: [pod_holder_id], onDelete: Cascade)
+  id            String    @id @default(uuid()) @db.Uuid
+  player_id     String    @db.Uuid
+  pod_holder_id String    @db.Uuid
+  assigned_date DateTime  @default(now()) @db.Timestamptz(6)
+  player        Player    @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  pod_holder    PodHolder @relation(fields: [pod_holder_id], references: [pod_holder_id], onDelete: Cascade)
 
   @@index([player_id])
   @@index([pod_holder_id])
@@ -252,8 +208,7 @@ model PodStatus {
   last_sync      DateTime?
   health_status  String?
   created_at     DateTime  @default(now()) @db.Timestamptz(6)
-
-  pod Pod @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
+  pod            Pod       @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
   @@index([pod_id])
   @@map("pod_statuses")
@@ -266,8 +221,7 @@ model PodHolderStatus {
   working_status String?
   last_sync      DateTime?
   created_at     DateTime  @default(now()) @db.Timestamptz(6)
-
-  pod_holder PodHolder @relation(fields: [pod_holder_id], references: [pod_holder_id], onDelete: Cascade)
+  pod_holder     PodHolder @relation(fields: [pod_holder_id], references: [pod_holder_id], onDelete: Cascade)
 
   @@index([pod_holder_id])
   @@map("pod_holder_statuses")
@@ -281,8 +235,8 @@ model RawData {
   acceleration_x Float?
   acceleration_y Float?
   acceleration_z Float?
-  latitude       Float?    @db.DoublePrecision
-  longitude      Float?    @db.DoublePrecision
+  latitude       Float?
+  longitude      Float?
   w              Float?
   x              Float?
   y              Float?
@@ -291,9 +245,8 @@ model RawData {
   speed          Float?
   heart_rate     Int?
   created_at     DateTime  @default(now()) @db.Timestamptz(6)
-
-  pod    Pod     @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
-  player Player? @relation(fields: [player_id], references: [player_id], onDelete: SetNull)
+  player         Player?   @relation(fields: [player_id], references: [player_id])
+  pod            Pod       @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
   @@index([pod_id])
   @@index([player_id])
@@ -302,16 +255,15 @@ model RawData {
 }
 
 model Event {
-  event_id   String    @id @default(uuid()) @db.Uuid
-  club_id    String    @db.Uuid
-  event_name String?
-  event_date DateTime?
-  location   String?
-  event_type String?
-  created_at DateTime  @default(now()) @db.Timestamptz(6)
-
-  club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  event_id           String             @id @default(uuid()) @db.Uuid
+  club_id            String             @db.Uuid
+  event_name         String?
+  event_date         DateTime?
+  location           String?
+  event_type         String?
+  created_at         DateTime           @default(now()) @db.Timestamptz(6)
   event_participants EventParticipant[]
+  club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
 
   @@map("events")
 }
@@ -321,53 +273,49 @@ model EventParticipant {
   event_id  String  @db.Uuid
   coach_id  String? @db.Uuid
   player_id String? @db.Uuid
-
-  event  Event   @relation(fields: [event_id], references: [event_id], onDelete: Cascade)
-  coach  Coach?  @relation(fields: [coach_id], references: [coach_id])
-  player Player? @relation(fields: [player_id], references: [player_id])
+  coach     Coach?  @relation(fields: [coach_id], references: [coach_id])
+  event     Event   @relation(fields: [event_id], references: [event_id], onDelete: Cascade)
+  player    Player? @relation(fields: [player_id], references: [player_id])
 
   @@index([event_id])
   @@map("event_participants")
 }
 
 model PaymentPlan {
-  plan_id       String   @id @default(uuid()) @db.Uuid
+  plan_id       String         @id @default(uuid()) @db.Uuid
   name          String?
   price_cents   Int?
   duration_days Int?
   description   String?
-  created_at    DateTime @default(now()) @db.Timestamptz(6)
-
+  created_at    DateTime       @default(now()) @db.Timestamptz(6)
   subscriptions Subscription[]
 
   @@map("payment_plans")
 }
 
 model Subscription {
-  subscription_id String    @id @default(uuid()) @db.Uuid
-  club_id         String    @db.Uuid
-  plan_id         String?   @db.Uuid
+  subscription_id String       @id @default(uuid()) @db.Uuid
+  club_id         String       @db.Uuid
+  plan_id         String?      @db.Uuid
   start_date      DateTime?
   end_date        DateTime?
-  status          String?   @default("active")
-  created_at      DateTime  @default(now()) @db.Timestamptz(6)
-
-  club     Club?        @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
-  plan     PaymentPlan? @relation(fields: [plan_id], references: [plan_id])
-  payments Payment[]
+  status          String?      @default("active")
+  created_at      DateTime     @default(now()) @db.Timestamptz(6)
+  payments        Payment[]
+  club            Club         @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  plan            PaymentPlan? @relation(fields: [plan_id], references: [plan_id])
 
   @@map("subscriptions")
 }
 
 model Payment {
-  payment_id      String   @id @default(uuid()) @db.Uuid
-  subscription_id String   @db.Uuid
+  payment_id      String       @id @default(uuid()) @db.Uuid
+  subscription_id String       @db.Uuid
   amount_cents    Int?
-  paid_at         DateTime @default(now()) @db.Timestamptz(6)
+  paid_at         DateTime     @default(now()) @db.Timestamptz(6)
   method          String?
-  transaction_ref String?  @unique
-
-  subscription Subscription @relation(fields: [subscription_id], references: [subscription_id], onDelete: Cascade)
+  transaction_ref String?      @unique
+  subscription    Subscription @relation(fields: [subscription_id], references: [subscription_id], onDelete: Cascade)
 
   @@map("payments")
 }
@@ -380,8 +328,7 @@ model ServiceRequest {
   status       String?
   created_at   DateTime @default(now()) @db.Timestamptz(6)
   updated_at   DateTime @default(now()) @db.Timestamptz(6)
-
-  club Club? @relation(fields: [club_id], references: [club_id], onDelete: SetNull)
+  club         Club?    @relation(fields: [club_id], references: [club_id])
 
   @@map("service_requests")
 }
@@ -405,8 +352,7 @@ model ActivityMetric {
   percent_in_red_zone Float?
   hr_recovery_time    Float?
   recorded_at         DateTime @default(now()) @db.Timestamptz(6)
-
-  player Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  player              Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
 
   @@index([player_id])
   @@index([recorded_at])

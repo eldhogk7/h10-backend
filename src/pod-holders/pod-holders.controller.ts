@@ -9,6 +9,7 @@ export class PodHoldersController {
   // ✅ CREATE POD HOLDER
   @Post()
   create(@Body() dto: CreatePodHolderDto) {
+    console.log('BODY RECEIVED >>>', dto);
     return this.service.create(dto);
   }
 

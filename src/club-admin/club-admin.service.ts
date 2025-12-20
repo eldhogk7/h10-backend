@@ -19,6 +19,17 @@ export class ClubAdminService {
     });
   }
 
+  async updateByClubId(club_id: string, dto: any) {
+    return this.prisma.clubAdmin.updateMany({
+      where: { club_id },
+      data: {
+        name: dto.name,
+        email: dto.email,
+        phone: dto.phone,
+      },
+    });
+  }
+
   findAll() {
     return this.prisma.clubAdmin.findMany();
   }

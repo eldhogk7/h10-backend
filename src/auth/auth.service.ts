@@ -31,9 +31,15 @@ export class AuthService {
     return safe;
   }
 
-  private signToken(payload: { sub: string; email: string; role: string }) {
+  private signToken(payload: {
+    sub: string;
+    email: string;
+    role: string;
+    club_id?: string;
+  }) {
     return this.jwt.sign(payload);
   }
+
 
   // REGISTER SUPER ADMIN
   async register(dto: RegisterDto) {

@@ -3,7 +3,11 @@ import {
   Post,
   Body,
   Get,
+  Param,
+  Delete,
+  Patch,
   UseGuards,
+  Req,
 } from '@nestjs/common';
 
 import { ClubAdminService } from './club-admin.service';
@@ -24,6 +28,16 @@ export class ClubAdminController {
   @Post()
   create(@Body() dto: CreateClubAdminDto) {
     return this.svc.create(dto);
+  }
+
+  @Patch('by-club/:clubId')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('SUPER_ADMIN')
+  updateByClub(
+    @Param('clubId') clubId: string,
+    @Body() dto: any,
+  ) {
+    return this.svc.updateByClubId(clubId, dto);
   }
 
   // ✅ PUBLIC: GET ALL CLUB ADMINS

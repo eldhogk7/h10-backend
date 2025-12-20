@@ -27,6 +27,9 @@ let ClubAdminController = class ClubAdminController {
     create(dto) {
         return this.svc.create(dto);
     }
+    updateByClub(clubId, dto) {
+        return this.svc.updateByClubId(clubId, dto);
+    }
     findAll() {
         return this.svc.findAll();
     }
@@ -41,6 +44,16 @@ __decorate([
     __metadata("design:paramtypes", [create_club_admin_dto_1.CreateClubAdminDto]),
     __metadata("design:returntype", void 0)
 ], ClubAdminController.prototype, "create", null);
+__decorate([
+    (0, common_1.Patch)('by-club/:clubId'),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
+    (0, roles_decorator_1.Roles)('SUPER_ADMIN'),
+    __param(0, (0, common_1.Param)('clubId')),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", void 0)
+], ClubAdminController.prototype, "updateByClub", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
