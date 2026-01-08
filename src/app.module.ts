@@ -18,7 +18,7 @@ import { ServiceRequestsModule } from './service-requests/service-requests.modul
 import { AnalyticsModule } from './analytics/analytics.module';
 import { PaymentPlansModule } from './payment-plans/payment-plans.module';
 import { PodHoldersModule } from './pod-holders/pod-holders.module';
-
+import { ActivityMetricsModule } from './calculation/activity-metrics.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -40,6 +40,7 @@ import { PodHoldersModule } from './pod-holders/pod-holders.module';
     SubscriptionsModule,
     ServiceRequestsModule,
     AnalyticsModule,
+    ActivityMetricsModule,
   ],
 })
 export class AppModule {}

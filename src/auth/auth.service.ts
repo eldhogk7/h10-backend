@@ -211,14 +211,20 @@ async login(dto: LoginDto) {
     }
 
     if (payload.role === 'CLUB_ADMIN') {
-      return {
-        role: 'CLUB_ADMIN',
-        user: await this.prisma.clubAdmin.findUnique({
-          where: { admin_id: payload.sub },
-        }),
-      };
-    }
+      const user = await this.prisma.clubAdmin.findUnique({
+        where: { admin_id: payload.sub },
+        select: {
+          admin_id: true,
+          club_id: true,
+          name: true,
+          email: true,
+          phone: true,
+          profile_image: true,
+        },
+      });
 
+      return { role: 'CLUB_ADMIN', user };
+    }
     return {
       role: 'COACH',
       user: await this.prisma.coach.findUnique({

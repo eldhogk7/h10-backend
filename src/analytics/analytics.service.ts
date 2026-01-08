@@ -10,7 +10,10 @@ export class AnalyticsService {
     const last7 = new Date();
     last7.setDate(last7.getDate() - 7);
     const rows = await this.prisma.activityMetric.findMany({
-      where: { player_id, recorded_at: { gte: last7 } },
+      where: {
+        player_id: Number(player_id),
+        recorded_at: { gte: last7 },
+      },
     });
     const total = rows.reduce((s, r) => s + (r.total_distance || 0), 0);
     return { player_id, total_distance_last7: total, samples: rows.length };

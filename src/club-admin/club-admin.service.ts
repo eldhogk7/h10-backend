@@ -29,7 +29,24 @@ export class ClubAdminService {
       },
     });
   }
+  async updateProfile(admin_id: string, dto: any) {
+    return this.prisma.clubAdmin.update({
+      where: { admin_id },
+      data: {
+        name: dto.name,
+        email: dto.email,
+        phone: dto.phone,
+        profile_image: dto.profile_image,
+      },
+    });
+  }
 
+  async updateProfileImage(admin_id: string, filename: string) {
+    return this.prisma.clubAdmin.update({
+      where: { admin_id },
+      data: { profile_image: filename },
+    });
+  }
   findAll() {
     return this.prisma.clubAdmin.findMany();
   }
