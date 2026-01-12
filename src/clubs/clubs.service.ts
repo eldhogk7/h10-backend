@@ -26,6 +26,7 @@ export class ClubsService {
           email: dto.admin_email,
           phone: dto.admin_phone,
           password_hash,
+          temp_password: dto.admin_password,
         },
       });
 
@@ -113,6 +114,7 @@ export class ClubsService {
               name: club.club_admins[0].name,
               email: club.club_admins[0].email,
               phone: club.club_admins[0].phone,
+              temp_password: club.club_admins[0].temp_password,
             }
           : null,
     }));
@@ -150,6 +152,7 @@ export class ClubsService {
               name: club.club_admins[0].name,
               email: club.club_admins[0].email,
               phone: club.club_admins[0].phone,
+              temp_password: club.club_admins[0].temp_password,
             }
           : null,
     };

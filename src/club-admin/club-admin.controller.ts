@@ -36,6 +36,14 @@ export class ClubAdminController {
     return this.svc.create(dto);
   }
 
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('SUPER_ADMIN')
+  @Get()
+  findAll() {
+    return this.svc.findAll(); 
+  }
+
+
   @Patch('by-club/:clubId')
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('SUPER_ADMIN')
@@ -65,11 +73,5 @@ export class ClubAdminController {
     @UploadedFile() file: Express.Multer.File,
   ) {
     return this.svc.updateProfileImage(id, file.filename);
-  }
-
-  // ✅ PUBLIC: GET ALL CLUB ADMINS
-  @Get()
-  findAll() {
-    return this.svc.findAll();
   }
 }

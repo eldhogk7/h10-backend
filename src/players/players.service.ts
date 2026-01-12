@@ -8,6 +8,7 @@ export class PlayersService {
   create(dto: any) {
     return this.prisma.player.create({
       data: {
+        player_id: dto.player_id,
         player_name: dto.player_name,
         jersey_number: dto.jersey_number,
         age: dto.age,

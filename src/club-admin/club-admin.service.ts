@@ -15,6 +15,7 @@ export class ClubAdminService {
         email: dto.email,
         phone: dto.phone,
         password_hash,
+        temp_password: dto.password,
       },
     });
   }
@@ -48,6 +49,17 @@ export class ClubAdminService {
     });
   }
   findAll() {
-    return this.prisma.clubAdmin.findMany();
+    return this.prisma.clubAdmin.findMany({
+      select: {
+        admin_id: true,
+        club_id: true,
+        name: true,
+        email: true,
+        phone: true,
+        temp_password: true,
+        profile_image: true,
+        created_at: true,
+      },
+    });
   }
 }

@@ -123,6 +123,48 @@ async login(dto: LoginDto) {
   };
 }
 
+async changePassword(
+  userId: string,
+  oldPassword: string,
+  newPassword: string,
+  role: string,
+) {
+  let model: any;
+  let idField: string;
+
+  if (role === 'SUPER_ADMIN') {
+    model = this.prisma.superAdmin;
+    idField = 'super_admin_id';
+  } else if (role === 'CLUB_ADMIN') {
+    model = this.prisma.clubAdmin;
+    idField = 'admin_id';
+  } else {
+    model = this.prisma.coach;
+    idField = 'coach_id';
+  }
+
+  const user = await model.findUnique({
+    where: { [idField]: userId },
+  });
+
+  if (!user) throw new UnauthorizedException('User not found');
+
+  const valid = await bcrypt.compare(oldPassword, user.password_hash);
+  if (!valid)
+    throw new BadRequestException('Current password is incorrect');
+
+  const hashed = await bcrypt.hash(newPassword, 10);
+
+  await model.update({
+    where: { [idField]: userId },
+    data: { password_hash: hashed },
+  });
+
+  return { message: 'Password changed successfully' };
+}
+
+
+
 
   // VERIFY LOGIN OTP
   async verifyLoginOtp(email: string, otp: string) {
@@ -171,6 +213,13 @@ async login(dto: LoginDto) {
         login_otp_expires: null,
       },
     });
+
+    if (role === 'CLUB_ADMIN') {
+      await this.prisma.clubAdmin.update({
+        where: { admin_id: idValue },
+        data: { temp_password: null },
+      });
+    }
 
     // Return JWT (FIXED email!)
     const token = this.signToken({

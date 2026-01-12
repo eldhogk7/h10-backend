@@ -7,6 +7,5 @@ import { PodsController } from './pods.controller';
   imports: [PrismaModule],
   providers: [PodsService],
   controllers: [PodsController],
-  exports: [PodsService],
 })
 export class PodsModule {}

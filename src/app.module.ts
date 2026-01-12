@@ -11,7 +11,7 @@ import { PodsModule } from './pods/pods.module';
 import { AssignmentsModule } from './assignments/assignments.module';
 import { EventsModule } from './events/events.module';
 import { UploadsModule } from './uploads/upload.module';
-import { MetricsModule } from './metrics/metrics.module';
+// import { MetricsModule } from './metrics/metrics.module';
 import { PaymentsModule } from './payments/payments.module';
 import { SubscriptionsModule } from './subscriptions/subscriptions.module';
 import { ServiceRequestsModule } from './service-requests/service-requests.module';
@@ -35,7 +35,7 @@ import { ActivityMetricsModule } from './calculation/activity-metrics.module';
     AssignmentsModule,
     EventsModule,
     UploadsModule,
-    MetricsModule,
+    // MetricsModule,
     PaymentsModule,
     SubscriptionsModule,
     ServiceRequestsModule,

@@ -31,7 +31,28 @@ export class ActivityMetricsController {
     return this.service.createMetric(
       session_id,
       Number(player_id),
-      metrics
+      {
+        totalDistance: metrics.total_distance,
+        hsrDistance: metrics.hsr_distance,
+        sprintDistance: metrics.sprint_distance,
+        topSpeed: metrics.top_speed,
+        sprintCount: metrics.sprint_count,
+
+        acceleration: metrics.acceleration,
+        deceleration: metrics.deceleration,
+        maxAcceleration: metrics.max_acceleration,
+        maxDeceleration: metrics.max_deceleration,
+
+        playerLoad: metrics.player_load,
+        powerScore: metrics.power_score,
+
+        hrMax: metrics.hr_max,
+        timeInRedZone: metrics.time_in_red_zone,
+        percentInRedZone: metrics.percent_in_red_zone,
+        hrRecoveryTime: metrics.hr_recovery_time,
+
+        createdAt: metrics.created_at,
+      }
     );
   }
   @Get()

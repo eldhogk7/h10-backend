@@ -5,70 +5,71 @@ import { PrismaService } from '../prisma/prisma.service';
 export class ActivityMetricsService {
   constructor(private prisma: PrismaService) {}
 
-  async createMetric(sessionId: string, playerId: number, m: any,) {
+  async createMetric(sessionId: string, playerId: number, m: any) {
     return this.prisma.activityMetric.upsert({
       where: {
-        session_id_player_id: {
-          session_id: sessionId,
-          player_id: playerId,
+        sessionId_playerId: {  // <-- camelCase for compound unique key
+          sessionId: sessionId,
+          playerId: playerId,
         },
       },
       update: {
-        total_distance: m.total_distance,
-        hsr_distance: m.hsr_distance,
-        sprint_distance: m.sprint_distance,
-        top_speed: m.top_speed,
-        sprint_count: m.sprint_count,
+        totalDistance: m.totalDistance,
+        hsrDistance: m.hsrDistance,
+        sprintDistance: m.sprintDistance,
+        topSpeed: m.topSpeed,
+        sprintCount: m.sprintCount,
 
-        acceleration: m.accelerations,
-        deceleration: m.decelerations,
-        max_acceleration: m.max_acceleration,
-        max_deceleration: m.max_deceleration,
+        acceleration: m.acceleration,
+        deceleration: m.deceleration,
+        maxAcceleration: m.maxAcceleration,
+        maxDeceleration: m.maxDeceleration,
 
-        player_load: m.player_load,
-        power_score: m.power_score,
+        playerLoad: m.playerLoad,
+        powerScore: m.powerScore,
 
-        hr_max: m.hr_max,
-        time_in_red_zone: m.time_in_red_zone,
-        percent_in_red_zone: m.percent_in_red_zone,
-        hr_recovery_time: m.hr_recovery_time,
+        hrMax: m.hrMax,
+        timeInRedZone: m.timeInRedZone,
+        percentInRedZone: m.percentInRedZone,
+        hrRecoveryTime: m.hrRecoveryTime,
 
-        recorded_at: new Date(
-          m.created_at ? Number(m.created_at) * 1000 : Date.now(),
+        recordedAt: new Date(
+          m.createdAt ? Number(m.createdAt) * 1000 : Date.now(),
         ),
       },
       create: {
-        session_id: sessionId,
-        player_id: playerId,
+        sessionId: sessionId,
+        playerId: playerId,
 
-        total_distance: m.total_distance,
-        hsr_distance: m.hsr_distance,
-        sprint_distance: m.sprint_distance,
-        top_speed: m.top_speed,
-        sprint_count: m.sprint_count,
+        totalDistance: m.totalDistance,
+        hsrDistance: m.hsrDistance,
+        sprintDistance: m.sprintDistance,
+        topSpeed: m.topSpeed,
+        sprintCount: m.sprintCount,
 
-        acceleration: m.accelerations,
-        deceleration: m.decelerations,
-        max_acceleration: m.max_acceleration,
-        max_deceleration: m.max_deceleration,
+        acceleration: m.acceleration,
+        deceleration: m.deceleration,
+        maxAcceleration: m.maxAcceleration,
+        maxDeceleration: m.maxDeceleration,
 
-        player_load: m.player_load,
-        power_score: m.power_score,
+        playerLoad: m.playerLoad,
+        powerScore: m.powerScore,
 
-        hr_max: m.hr_max,
-        time_in_red_zone: m.time_in_red_zone,
-        percent_in_red_zone: m.percent_in_red_zone,
-        hr_recovery_time: m.hr_recovery_time,
+        hrMax: m.hrMax,
+        timeInRedZone: m.timeInRedZone,
+        percentInRedZone: m.percentInRedZone,
+        hrRecoveryTime: m.hrRecoveryTime,
 
-        recorded_at: new Date(
-          m.created_at ? Number(m.created_at) * 1000 : Date.now(),
+        recordedAt: new Date(
+          m.createdAt ? Number(m.createdAt) * 1000 : Date.now(),
         ),
       },
     });
   }
+
   async getAllMetrics() {
     return this.prisma.activityMetric.findMany({
-      orderBy: { recorded_at: 'asc' },
+      orderBy: { recordedAt: 'asc' }, // <-- camelCase
     });
   }
 }

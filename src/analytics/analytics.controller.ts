@@ -8,6 +8,6 @@ export class AnalyticsController {
 
   @Get('player/:player_id/summary')
   playerSummary(@Param('player_id') player_id: string) {
-    return this.svc.playerSummary(player_id);
+    return this.svc.playerSummary(+player_id);
   }
 }

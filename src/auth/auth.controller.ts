@@ -1,7 +1,16 @@
-import { Body, Controller, Get, Headers, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Headers,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
+import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Controller('auth')
 export class AuthController {
@@ -36,7 +45,22 @@ export class AuthController {
   reset(@Body() body: { token: string; password: string }) {
     return this.authService.resetPassword(body.token, body.password);
   }
-  
+
+  // ✅ NEW: CHANGE PASSWORD (LOGGED-IN USER)
+  @Post('change-password')
+  @UseGuards(JwtAuthGuard)
+  changePassword(
+    @Req() req,
+    @Body() body: { oldPassword: string; newPassword: string },
+  ) {
+    return this.authService.changePassword(
+      req.user.sub,
+      body.oldPassword,
+      body.newPassword,
+      req.user.role,
+    );
+  }
+
   @Get('has-super-admin')
   async hasSuperAdmin() {
     const exists = await this.authService.hasSuperAdmin();
