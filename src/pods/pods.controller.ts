@@ -10,6 +10,8 @@ import {
 } from '@nestjs/common';
 import { PodsService } from './pods.service';
 import { CreatePodDto } from './dto/create-pod.dto';
+import { UseGuards, Req } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
 @Controller('pods')
 export class PodsController {
@@ -39,7 +41,19 @@ export class PodsController {
 
     return { data: result };
   }
+  /* ================= GET PODS FOR LOGGED-IN CLUB ================= */
+  @UseGuards(JwtAuthGuard)
+  @Get('my-club')
+  async getMyClubPods(@Req() req: any) {
+    const clubId = req.user.club_id;
 
+    if (!clubId) {
+      throw new BadRequestException('Club not found for user');
+    }
+
+    const pods = await this.svc.findAvailablePodsForClub(clubId);
+    return { data: pods };
+  }
   /* ================= GET ALL PODS ================= */
   @Get()
   async findAll() {

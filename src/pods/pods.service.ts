@@ -133,4 +133,44 @@ export class PodsService {
 
     return result;
   }
+  // pods.service.ts
+  async findPodsByClub(clubId: string) {
+    return this.prisma.pod.findMany({
+      where: {
+        pod_holder: {
+          club_id: clubId,
+        },
+      },
+      select: {
+        pod_id: true,
+        serial_number: true,
+        lifecycle_status: true,
+      },
+      orderBy: {
+        serial_number: 'asc',
+      },
+    });
+  }
+  async findAvailablePodsForClub(clubId: string) {
+  return this.prisma.pod.findMany({
+    where: {
+      pod_holder: {
+        club_id: clubId,
+      },
+      player_pods: {
+        none: {}, // 🔥 exclude assigned pods
+      },
+      lifecycle_status: {
+        in: ['ACTIVE', 'ASSIGNED'],
+      }, // pod is usable
+    },
+    select: {
+      pod_id: true,
+      serial_number: true,
+    },
+    orderBy: {
+      serial_number: 'asc',
+    },
+  });
+}
 }

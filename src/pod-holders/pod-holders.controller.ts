@@ -18,42 +18,42 @@ import { PodLifecycleStatus } from '@prisma/client';
 
 @Controller('pod-holders')
 export class PodHoldersController {
-  constructor(private readonly service: PodHoldersService) {}
+  constructor(private readonly svc: PodHoldersService) {}
 
   /* ================= CREATE ================= */
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('SUPER_ADMIN')
   @Post()
   create(@Body() dto: CreatePodHolderDto) {
-    return this.service.create(dto);
+    return this.svc.create(dto);
   }
 
   /* ================= AVAILABLE PODS (🔥 MUST BE BEFORE :id) ================= */
   @UseGuards(JwtAuthGuard)
   @Get('available')
   findAvailablePods() {
-    return this.service.findAvailablePods();
+    return this.svc.findAvailablePods();
   }
 
   /* ================= UNASSIGNED POD HOLDERS ================= */
   @UseGuards(JwtAuthGuard)
   @Get('unassigned')
   findUnassignedPodHolders() {
-    return this.service.findUnassignedPodHolders();
+    return this.svc.findUnassignedPodHolders();
   }
 
   /* ================= GET ALL ================= */
   @UseGuards(JwtAuthGuard)
   @Get()
   findAll() {
-    return this.service.findAll();
+    return this.svc.findAll();
   }
 
   /* ================= GET ONE (⚠️ ALWAYS LAST) ================= */
   @UseGuards(JwtAuthGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.service.findOne(id);
+    return this.svc.findOne(id);
   }
 
   /* ================= UPDATE STATUS ================= */
@@ -63,7 +63,7 @@ export class PodHoldersController {
     @Param('id') id: string,
     @Body('status') status: PodLifecycleStatus,
   ) {
-    return this.service.updateStatus(id, status);
+    return this.svc.updateStatus(id, status);
   }
 
   /* ================= ADD POD ================= */
@@ -73,7 +73,7 @@ export class PodHoldersController {
     @Param('id') podHolderId: string,
     @Param('podId') podId: string,
   ) {
-    return this.service.addPodToHolder(podHolderId, podId);
+    return this.svc.addPodToHolder(podHolderId, podId);
   }
 
   /* ================= REPLACE POD ================= */
@@ -88,7 +88,7 @@ export class PodHoldersController {
       performedBy?: string;
     },
   ) {
-    return this.service.replacePod({
+    return this.svc.replacePod({
       podHolderId,
       ...body,
     });
@@ -101,7 +101,7 @@ export class PodHoldersController {
     @Param('id') podHolderId: string,
     @Param('podId') podId: string,
   ) {
-    return this.service.removePodFromHolder(podHolderId, podId);
+    return this.svc.removePodFromHolder(podHolderId, podId);
   }
 
   /* ================= ASSIGN TO CLUB ================= */
@@ -113,7 +113,7 @@ export class PodHoldersController {
     @Param('clubId') clubId: string,
     @Req() req: any,
   ) {
-    return this.service.assignPodHolderToClub(
+    return this.svc.assignPodHolderToClub(
       podHolderId,
       clubId,
       req.user.sub,
@@ -128,7 +128,7 @@ export class PodHoldersController {
     @Param('id') podHolderId: string,
     @Req() req: any,
   ) {
-    return this.service.unassignPodHolder(
+    return this.svc.unassignPodHolder(
       podHolderId,
       req.user.sub,
     );
@@ -139,6 +139,6 @@ export class PodHoldersController {
   @Roles('SUPER_ADMIN')
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.service.remove(id);
+    return this.svc.remove(id);
   }
 }

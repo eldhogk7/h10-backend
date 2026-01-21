@@ -1,21 +1,23 @@
-import { IsString, IsOptional, IsInt } from 'class-validator';
+import { IsInt, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class CreatePlayerDto {
   @IsString()
   player_name: string;
 
-  @IsOptional()
   @IsInt()
-  jersey_number?: number;
+  age: number;
 
-  @IsOptional()
   @IsInt()
-  age?: number;
+  jersey_number: number;
+
+  @IsString()
+  position: string;
 
   @IsOptional()
   @IsString()
-  position?: string;
+  phone?: string;
 
-  @IsString()
-  club_id: string;
+  @IsOptional()
+  @IsUUID()
+  pod_id?: string;
 }

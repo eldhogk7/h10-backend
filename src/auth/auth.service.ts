@@ -221,12 +221,39 @@ async changePassword(
       });
     }
 
-    // Return JWT (FIXED email!)
-    const token = this.signToken({
-      sub: idValue,
-      email: user.email!, // FIX
-      role,
-    });
+    // ✅ JWT WITH CLUB_ID FOR CLUB_ADMIN
+    let tokenPayload: {
+      sub: string;
+      email: string;
+      role: string;
+      club_id?: string;
+    };
+
+    if (role === 'CLUB_ADMIN') {
+      const admin = await this.prisma.clubAdmin.findUnique({
+        where: { admin_id: idValue },
+        select: { club_id: true },
+      });
+
+      if (!admin) {
+        throw new UnauthorizedException('Club admin not found');
+      }
+
+      tokenPayload = {
+        sub: idValue,
+        email: user.email!,
+        role,
+        club_id: admin.club_id,
+      };
+    } else {
+      tokenPayload = {
+        sub: idValue,
+        email: user.email!,
+        role,
+      };
+    }
+
+    const token = this.signToken(tokenPayload);
 
     return {
       message: 'Login successful',

@@ -91,7 +91,7 @@ model Coach {
 }
 
 model Player {
-  player_id String @id @map("player_id") @db.Uuid
+  player_id String @id @default(uuid()) @db.Uuid
   club_id   String @db.Uuid
 
   player_name   String?
@@ -116,7 +116,7 @@ model Player {
   raw_data           RawData[]
 
   club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
-
+  @@unique([club_id, jersey_number])
   @@map("players")
 }
 
@@ -235,6 +235,7 @@ model PlayerPod {
   player        Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
   pod           Pod      @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
+  @@unique([pod_id])
   @@index([player_id])
   @@index([pod_id])
   @@map("player_pods")
