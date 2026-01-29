@@ -16,7 +16,7 @@ export class AuthService {
     private prisma: PrismaService,
     private jwt: JwtService,
     private mailService: MailService,
-  ) {}
+  ) { }
 
   // Clean user before sending out
   private buildUserResponse(user: any) {
@@ -72,96 +72,108 @@ export class AuthService {
   }
 
   // LOGIN → SEND OTP
-// LOGIN → SEND OTP
-async login(dto: LoginDto) {
-  const user =
-    (await this.prisma.superAdmin.findUnique({ where: { email: dto.email } })) ||
-    (await this.prisma.clubAdmin.findUnique({ where: { email: dto.email } })) ||
-    (await this.prisma.coach.findUnique({ where: { email: dto.email } }));
+  // LOGIN → SEND OTP
+  async login(dto: LoginDto) {
+    const user =
+      (await this.prisma.superAdmin.findUnique({ where: { email: dto.email } })) ||
+      (await this.prisma.clubAdmin.findUnique({ where: { email: dto.email } })) ||
+      (await this.prisma.coach.findUnique({ where: { email: dto.email } }));
 
-  if (!user) throw new UnauthorizedException('User not found');
+    if (!user) throw new UnauthorizedException('User not found');
 
-  const valid = await bcrypt.compare(dto.password, user.password_hash);
-  if (!valid) throw new UnauthorizedException('Invalid password');
+    console.log(`Login attempt for email: ${user.email}`);
 
-  // Create OTP
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  const expires = new Date(Date.now() + 10 * 60 * 1000);
+    const valid = await bcrypt.compare(dto.password, user.password_hash);
+    if (!valid) {
+      console.log(`Invalid password for email: ${user.email}`);
+      throw new UnauthorizedException('Invalid password');
+    }
 
-  // Identify model
-  let model, idField, idValue;
+    // Create OTP
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const expires = new Date(Date.now() + 10 * 60 * 1000);
 
-  if ('super_admin_id' in user) {
-    model = this.prisma.superAdmin;
-    idField = 'super_admin_id';
-    idValue = user.super_admin_id;
-  } else if ('admin_id' in user) {
-    model = this.prisma.clubAdmin;
-    idField = 'admin_id';
-    idValue = user.admin_id;
-  } else {
-    model = this.prisma.coach;
-    idField = 'coach_id';
-    idValue = user.coach_id;
+    // Identify model
+    let model, idField, idValue;
+
+    if ('super_admin_id' in user) {
+      model = this.prisma.superAdmin;
+      idField = 'super_admin_id';
+      idValue = user.super_admin_id;
+    } else if ('admin_id' in user) {
+      model = this.prisma.clubAdmin;
+      idField = 'admin_id';
+      idValue = user.admin_id;
+    } else {
+      model = this.prisma.coach;
+      idField = 'coach_id';
+      idValue = user.coach_id;
+    }
+
+    await model.update({
+      where: { [idField]: idValue },
+      data: {
+        login_otp: otp,
+        login_otp_expires: expires,
+      },
+    });
+
+    try {
+      console.log(`Sending OTP to ${user.email}...`);
+      await this.mailService.sendLoginOtpEmail(user.email!, otp);
+      console.log(`OTP sent successfully to ${user.email}`);
+    } catch (mailError) {
+      console.error(`Failed to send OTP to ${user.email}:`, mailError);
+      throw new BadRequestException('Failed to send OTP email');
+    }
+
+
+    return {
+      needOtp: true,
+      email: user.email,
+      message: "OTP sent to email"
+    };
   }
 
-  await model.update({
-    where: { [idField]: idValue },
-    data: {
-      login_otp: otp,
-      login_otp_expires: expires,
-    },
-  });
+  async changePassword(
+    userId: string,
+    oldPassword: string,
+    newPassword: string,
+    role: string,
+  ) {
+    let model: any;
+    let idField: string;
 
-  await this.mailService.sendLoginOtpEmail(user.email!, otp);
+    if (role === 'SUPER_ADMIN') {
+      model = this.prisma.superAdmin;
+      idField = 'super_admin_id';
+    } else if (role === 'CLUB_ADMIN') {
+      model = this.prisma.clubAdmin;
+      idField = 'admin_id';
+    } else {
+      model = this.prisma.coach;
+      idField = 'coach_id';
+    }
 
+    const user = await model.findUnique({
+      where: { [idField]: userId },
+    });
 
-  return {
-    needOtp: true,
-    email: user.email,
-    message: "OTP sent to email"
-  };
-}
+    if (!user) throw new UnauthorizedException('User not found');
 
-async changePassword(
-  userId: string,
-  oldPassword: string,
-  newPassword: string,
-  role: string,
-) {
-  let model: any;
-  let idField: string;
+    const valid = await bcrypt.compare(oldPassword, user.password_hash);
+    if (!valid)
+      throw new BadRequestException('Current password is incorrect');
 
-  if (role === 'SUPER_ADMIN') {
-    model = this.prisma.superAdmin;
-    idField = 'super_admin_id';
-  } else if (role === 'CLUB_ADMIN') {
-    model = this.prisma.clubAdmin;
-    idField = 'admin_id';
-  } else {
-    model = this.prisma.coach;
-    idField = 'coach_id';
+    const hashed = await bcrypt.hash(newPassword, 10);
+
+    await model.update({
+      where: { [idField]: userId },
+      data: { password_hash: hashed },
+    });
+
+    return { message: 'Password changed successfully' };
   }
-
-  const user = await model.findUnique({
-    where: { [idField]: userId },
-  });
-
-  if (!user) throw new UnauthorizedException('User not found');
-
-  const valid = await bcrypt.compare(oldPassword, user.password_hash);
-  if (!valid)
-    throw new BadRequestException('Current password is incorrect');
-
-  const hashed = await bcrypt.hash(newPassword, 10);
-
-  await model.update({
-    where: { [idField]: userId },
-    data: { password_hash: hashed },
-  });
-
-  return { message: 'Password changed successfully' };
-}
 
 
 

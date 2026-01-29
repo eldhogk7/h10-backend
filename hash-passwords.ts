@@ -17,6 +17,11 @@ async function main() {
     data: { password_hash: hashedPassword },
   });
 
+  await prisma.clubAdmin.update({
+    where: { email: "babuajin120@gmail.com" },
+    data: { password_hash: hashedPassword },
+  });
+
   console.log("✅ Password hashed and updated successfully");
 }
 
