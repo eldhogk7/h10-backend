@@ -41,7 +41,10 @@ export class PlayersService {
             age: dto.age,
             jersey_number: dto.jersey_number,
             position: dto.position,
-            phone: dto.phone,
+              phone: dto.phone,
+              heartrate: dto.heartrate,
+              height: dto.height,
+              weight: dto.weight,
           },
         });
       } catch (e: any) {
@@ -122,5 +125,121 @@ export class PlayersService {
         created_at: 'desc',
       },
     });
+  }
+
+  async updatePlayer(
+    clubAdminId: string,
+    clubId: string,
+    playerId: string,
+    dto: any,
+  ) {
+    // validate admin
+    const admin = await this.prisma.clubAdmin.findFirst({ where: { admin_id: clubAdminId, club_id: clubId } });
+    if (!admin) throw new BadRequestException('Invalid club admin');
+
+    // ensure player belongs to club
+    const player = await this.prisma.player.findUnique({ where: { player_id: playerId } });
+    if (!player || player.club_id !== clubId) throw new BadRequestException('Player not found');
+
+    return this.prisma.$transaction(async tx => {
+      try {
+        // Extract hr_zones from dto (do not pass to player.update)
+        const { hr_zones, ...playerData } = dto;
+
+        // Update player
+        const updated = await tx.player.update({
+          where: { player_id: playerId },
+          data: playerData,
+          include: {
+            player_pods: { include: { pod: { include: { pod_holder: true } } } },
+            club: true,
+            hr_zones: true,
+          },
+        });
+
+        // Handle hr_zones if provided
+        if (hr_zones && Array.isArray(hr_zones)) {
+          // Delete existing zones for this player
+          await tx.hrZone.deleteMany({ where: { player_id: playerId } });
+
+          // Create new zones
+          for (const zone of hr_zones) {
+            await tx.hrZone.create({
+              data: {
+                player_id: playerId,
+                zone_number: zone.zone || zone.zone_number,
+                min_hr: zone.min || zone.min_hr,
+                max_hr: zone.max || zone.max_hr,
+              },
+            });
+          }
+        }
+
+        // Re-fetch to include updated zones
+        return tx.player.findUnique({
+          where: { player_id: playerId },
+          include: {
+            player_pods: { include: { pod: { include: { pod_holder: true } } } },
+            club: true,
+            hr_zones: true,
+          },
+        });
+      } catch (e: any) {
+        if (
+          e instanceof Prisma.PrismaClientKnownRequestError &&
+          e.code === 'P2002'
+        ) {
+          throw new BadRequestException('Jersey number already exists in this club');
+        }
+        throw e;
+      }
+    });
+  }
+
+  async assignPodToPlayer(
+    clubAdminId: string,
+    clubId: string,
+    playerId: string,
+    podId: string,
+  ) {
+    // validate admin
+    const admin = await this.prisma.clubAdmin.findFirst({ where: { admin_id: clubAdminId, club_id: clubId } });
+    if (!admin) throw new BadRequestException('Invalid club admin');
+
+    // validate player
+    const player = await this.prisma.player.findUnique({ where: { player_id: playerId } });
+    if (!player || player.club_id !== clubId) throw new BadRequestException('Player not found');
+
+    // validate pod
+    const pod = await this.prisma.pod.findFirst({ where: { pod_id: podId }, include: { pod_holder: true } });
+    if (!pod || !pod.pod_holder) throw new BadRequestException('Invalid pod');
+    if (pod.pod_holder.club_id !== clubId) throw new BadRequestException('Pod does not belong to your club');
+
+    // ensure pod not already assigned
+    const existing = await this.prisma.playerPod.findFirst({ where: { pod_id: podId } });
+    if (existing) throw new BadRequestException('Pod already assigned');
+
+    await this.prisma.playerPod.create({ data: { player_id: playerId, pod_id: podId } });
+
+    return this.prisma.player.findUnique({ where: { player_id: playerId }, include: { player_pods: { include: { pod: { include: { pod_holder: true } } } }, club: true, hr_zones: true } });
+  }
+
+  async unassignPodFromPlayer(
+    clubAdminId: string,
+    clubId: string,
+    playerId: string,
+  ) {
+    // validate admin
+    const admin = await this.prisma.clubAdmin.findFirst({ where: { admin_id: clubAdminId, club_id: clubId } });
+    if (!admin) throw new BadRequestException('Invalid club admin');
+
+    // validate player
+    const player = await this.prisma.player.findUnique({ where: { player_id: playerId } });
+    if (!player || player.club_id !== clubId) throw new BadRequestException('Player not found');
+
+    // delete assignment(s)
+    await this.prisma.playerPod.deleteMany({ where: { player_id: playerId } });
+
+    return this.prisma.player.findUnique({ where: { player_id: playerId }, include: { player_pods: { include: { pod: { include: { pod_holder: true } } } }, club: true, hr_zones: true } });
   }
 }

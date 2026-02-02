@@ -42,6 +42,7 @@ model Club {
   pod_holders     PodHolder[]
   serviceRequests ServiceRequest[]
   subscriptions   Subscription[]
+  hr_zone_defaults ClubHrZoneDefault[]
 
   @@map("clubs")
 }
@@ -98,6 +99,9 @@ model Player {
   jersey_number Int?
   age           Int?
   position      String?
+  heartrate     Int?
+  height        Float?
+  weight        Float?
   phone         String?
   player_image  String?
 
@@ -108,6 +112,7 @@ model Player {
    * One-to-many
    */
   activity_metrics ActivityMetric[]
+  hr_zones         HrZone[]
 
   coach_assignments  CoachAssignment[]
   event_participants EventParticipant[]
@@ -118,6 +123,34 @@ model Player {
   club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
   @@unique([club_id, jersey_number])
   @@map("players")
+}
+
+model HrZone {
+  zone_id    String @id @default(uuid()) @db.Uuid
+  player_id  String @db.Uuid
+  zone_number Int
+  min_hr     Int
+  max_hr     Int
+
+  player Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+
+  @@unique([player_id, zone_number])
+  @@map("hr_zones")
+}
+
+model ClubHrZoneDefault {
+  zone_id     String @id @default(uuid()) @db.Uuid
+  club_id     String @db.Uuid
+  zone_number Int
+  min_hr      Int
+  max_hr      Int
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  updated_at  DateTime @updatedAt @db.Timestamptz(6)
+
+  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+
+  @@unique([club_id, zone_number])
+  @@map("club_hr_zone_defaults")
 }
 
 model Pod {

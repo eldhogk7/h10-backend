@@ -11,6 +11,7 @@ import { PodsModule } from './pods/pods.module';
 import { AssignmentsModule } from './assignments/assignments.module';
 import { EventsModule } from './events/events.module';
 import { UploadsModule } from './uploads/upload.module';
+import { ClubZonesModule } from './club-zones/club-zones.module';
 // import { MetricsModule } from './metrics/metrics.module';
 import { PaymentsModule } from './payments/payments.module';
 import { SubscriptionsModule } from './subscriptions/subscriptions.module';
@@ -35,6 +36,7 @@ import { ActivityMetricsModule } from './calculation/activity-metrics.module';
     AssignmentsModule,
     EventsModule,
     UploadsModule,
+    ClubZonesModule,
     // MetricsModule,
     PaymentsModule,
     SubscriptionsModule,
