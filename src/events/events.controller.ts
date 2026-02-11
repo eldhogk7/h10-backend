@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get, Param } from '@nestjs/common';
+import { Controller, Post, Body, Get, Param, Patch, Delete } from '@nestjs/common';
 import { EventsService } from './events.service';
 import { CreateEventDto } from './dto/create-event.dto';
 
@@ -26,5 +26,15 @@ export class EventsController {
   @Get('session/:sessionId')
   findBySessionId(@Param('sessionId') sessionId: string) {
     return this.svc.findBySessionId(sessionId);
+  }
+
+  @Patch('session/:sessionId')
+  updateBySessionId(@Param('sessionId') sessionId: string, @Body() dto: any) {
+    return this.svc.updateBySessionId(sessionId, dto);
+  }
+
+  @Delete('session/:sessionId')
+  deleteBySessionId(@Param('sessionId') sessionId: string) {
+    return this.svc.deleteBySessionId(sessionId);
   }
 }

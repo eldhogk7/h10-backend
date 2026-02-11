@@ -6,12 +6,15 @@ export class EventsService {
   constructor(private prisma: PrismaService) { }
 
   create(dto: any) {
+    const ground_name = dto.ground_name ?? dto.field ?? null;
     return this.prisma.event.create({
       data: {
         club_id: dto.club_id,
         event_name: dto.event_name,
         event_date: dto.event_date ? new Date(dto.event_date) : undefined,
         location: dto.location,
+        ground_name,
+        notes: dto.notes ?? null,
         event_type: dto.event_type,
       },
     });
@@ -26,6 +29,7 @@ export class EventsService {
       event_date,
       location,
       field,
+      ground_name: groundNameInput,
       notes,
       file_start_ts,
       file_end_ts,
@@ -35,6 +39,7 @@ export class EventsService {
       exercises
     } = dto;
 
+    const ground_name = groundNameInput ?? field ?? null;
     try {
       return await this.prisma.$transaction(async (tx) => {
         // Upsert based on session_id (from mobile)
@@ -47,6 +52,8 @@ export class EventsService {
             event_type: event_type || 'training',
             event_date: event_date ? new Date(event_date) : null,
             location,
+            ground_name,
+            notes: notes ?? null,
             file_start_ts: file_start_ts ? BigInt(Math.floor(Number(file_start_ts))) : null,
             file_end_ts: file_end_ts ? BigInt(Math.floor(Number(file_end_ts))) : null,
             trim_start_ts: trim_start_ts ? BigInt(Math.floor(Number(trim_start_ts))) : null,
@@ -59,6 +66,8 @@ export class EventsService {
             event_type: event_type || 'training',
             event_date: event_date ? new Date(event_date) : null,
             location,
+            ground_name,
+            notes: notes ?? null,
             file_start_ts: file_start_ts ? BigInt(Math.floor(Number(file_start_ts))) : null,
             file_end_ts: file_end_ts ? BigInt(Math.floor(Number(file_end_ts))) : null,
             trim_start_ts: trim_start_ts ? BigInt(Math.floor(Number(trim_start_ts))) : null,
@@ -115,6 +124,54 @@ export class EventsService {
       console.error('❌ [EventsService] Error syncing event:', err);
       throw err;
     }
+  }
+
+  async updateBySessionId(sessionId: string, dto: any) {
+    const ground_name = dto.ground_name ?? dto.field ?? null;
+    const data = {
+      event_name: dto.event_name,
+      event_type: dto.event_type || 'training',
+      event_date: dto.event_date ? new Date(dto.event_date) : null,
+      location: dto.location,
+      ground_name,
+      notes: dto.notes ?? null,
+    };
+
+    const bySession = await this.prisma.event.findUnique({
+      where: { sessionId },
+      select: { event_id: true },
+    });
+
+    if (bySession?.event_id) {
+      return this.prisma.event.update({
+        where: { event_id: bySession.event_id },
+        data,
+      });
+    }
+
+    // Fallback: treat sessionId as event_id
+    return this.prisma.event.update({
+      where: { event_id: sessionId },
+      data,
+    });
+  }
+
+  async deleteBySessionId(sessionId: string) {
+    const bySession = await this.prisma.event.findUnique({
+      where: { sessionId },
+      select: { event_id: true },
+    });
+
+    if (bySession?.event_id) {
+      return this.prisma.event.delete({
+        where: { event_id: bySession.event_id },
+      });
+    }
+
+    // Fallback: treat sessionId as event_id
+    return this.prisma.event.delete({
+      where: { event_id: sessionId },
+    });
   }
 
   findAll() {

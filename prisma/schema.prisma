@@ -399,6 +399,8 @@ model Event {
   event_name         String?
   event_date         DateTime?
   location           String?
+  ground_name        String?
+  notes              String?
   event_type         String?
 
   file_start_ts      BigInt?

@@ -15,6 +15,18 @@ export class CreateEventDto {
   @IsString()
   event_type?: string;
 
+  @IsOptional()
+  @IsString()
+  field?: string;
+
+  @IsOptional()
+  @IsString()
+  ground_name?: string;
+
+  @IsOptional()
+  @IsString()
+  notes?: string;
+
   @IsString()
   club_id: string;
 }
