@@ -18,7 +18,7 @@ import { PodLifecycleStatus } from '@prisma/client';
 
 @Controller('pod-holders')
 export class PodHoldersController {
-  constructor(private readonly svc: PodHoldersService) {}
+  constructor(private readonly svc: PodHoldersService) { }
 
   /* ================= CREATE ================= */
   @UseGuards(JwtAuthGuard, RolesGuard)
@@ -45,8 +45,8 @@ export class PodHoldersController {
   /* ================= GET ALL ================= */
   @UseGuards(JwtAuthGuard)
   @Get()
-  findAll() {
-    return this.svc.findAll();
+  findAll(@Req() req: any) {
+    return this.svc.findAll(req.user);
   }
 
   /* ================= GET ONE (⚠️ ALWAYS LAST) ================= */

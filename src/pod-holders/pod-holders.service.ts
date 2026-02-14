@@ -14,7 +14,7 @@ import { randomUUID } from 'crypto';
 
 @Injectable()
 export class PodHoldersService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) { }
 
   /* ================= CREATE POD HOLDER ================= */
 
@@ -69,8 +69,23 @@ export class PodHoldersService {
 
   /* ================= GET ALL POD HOLDERS ================= */
 
-  findAll() {
-    return this.prisma.podHolder.findMany({
+  async findAll(user?: any) {
+    // Build the where clause based on user role
+    const where: any = {};
+
+    console.log('🔍 findAll pod holders - User:', user?.role, 'Club ID:', user?.club_id);
+
+    // If user is club_admin or coach, filter by their club_id
+    if (user?.role === 'CLUB_ADMIN' || user?.role === 'COACH') {
+      where.club_id = user.club_id;
+      console.log('✅ Filtering pod holders by club_id:', user.club_id);
+    } else {
+      console.log('✅ Super admin - showing all pod holders');
+    }
+    // Super admin sees all pod holders (no filter)
+
+    const podHolders = await this.prisma.podHolder.findMany({
+      where,
       include: {
         pods: {
           select: {
@@ -85,6 +100,9 @@ export class PodHoldersService {
       },
       orderBy: { created_at: 'desc' },
     });
+
+    console.log(`📦 Returning ${podHolders.length} pod holders`);
+    return podHolders;
   }
 
   /* ================= GET AVAILABLE PODS ================= */
@@ -132,7 +150,17 @@ export class PodHoldersService {
     const podHolder = await this.prisma.podHolder.findUnique({
       where: { pod_holder_id: id },
       include: {
-        pods: true,
+        pods: {
+          include: {
+            player_pods: true, // ✅ Include player assignments
+            pod_holder: {
+              select: {
+                pod_holder_id: true,
+                serial_number: true,
+              },
+            },
+          },
+        },
         club: { select: { club_name: true } },
       },
     });
@@ -270,28 +298,28 @@ export class PodHoldersService {
   }
 
 
-   /* ================= REMOVE POD ================= */
+  /* ================= REMOVE POD ================= */
 
 
-    async removePodFromHolder(podHolderId: string, podId: string) {
-      const pod = await this.prisma.pod.findUnique({
-        where: { pod_id: podId },
-      });
+  async removePodFromHolder(podHolderId: string, podId: string) {
+    const pod = await this.prisma.pod.findUnique({
+      where: { pod_id: podId },
+    });
 
-      if (!pod || pod.pod_holder_id !== podHolderId) {
-        throw new NotFoundException('Pod not found in this holder');
-      }
-
-      await this.prisma.pod.update({
-        where: { pod_id: podId },
-        data: {
-          pod_holder_id: null,
-          lifecycle_status: PodLifecycleStatus.ACTIVE,
-        },
-      });
-
-      return { message: 'Pod removed successfully' };
+    if (!pod || pod.pod_holder_id !== podHolderId) {
+      throw new NotFoundException('Pod not found in this holder');
     }
+
+    await this.prisma.pod.update({
+      where: { pod_id: podId },
+      data: {
+        pod_holder_id: null,
+        lifecycle_status: PodLifecycleStatus.ACTIVE,
+      },
+    });
+
+    return { message: 'Pod removed successfully' };
+  }
   /* ================= DELETE POD HOLDER ================= */
 
   async remove(id: string) {

@@ -34,3 +34,14 @@
 [2026-02-10T07:23:54.885Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
 [2026-02-10T10:56:54.887Z] 404 - {"message":"Cannot GET /uploads/1000333366.jpg","error":"Not Found","statusCode":404} - /uploads/1000333366.jpg
 [2026-02-10T10:57:12.432Z] 404 - {"message":"Cannot GET /uploads/1000333306.jpg","error":"Not Found","statusCode":404} - /uploads/1000333306.jpg
+[2026-02-13T09:23:32.719Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T09:26:38.030Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T09:49:05.839Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-02-13T09:58:10.647Z] 400 - {"message":"Jersey number already exists in this club","error":"Bad Request","statusCode":400} - /players
+[2026-02-13T09:58:19.174Z] 400 - {"message":["jersey_number must be an integer number"],"error":"Bad Request","statusCode":400} - /players
+[2026-02-13T10:09:05.371Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T10:11:41.275Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T10:12:14.597Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-02-13T10:13:59.176Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T10:15:32.243Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-13T10:16:46.490Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
