@@ -1,0 +1,2 @@
+[2026-02-18T07:27:02.421Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-02-18T07:27:32.433Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
