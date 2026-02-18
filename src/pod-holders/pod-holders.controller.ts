@@ -134,6 +134,16 @@ export class PodHoldersController {
     );
   }
 
+  /* ================= UPDATE WIFI CREDENTIALS ================= */
+  @UseGuards(JwtAuthGuard)
+  @Patch(':id/wifi')
+  updateWifi(
+    @Param('id') id: string,
+    @Body() body: { ssid: string; password?: string },
+  ) {
+    return this.svc.updateWifi(id, body.ssid, body.password);
+  }
+
   /* ================= DELETE ================= */
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('SUPER_ADMIN')

@@ -421,6 +421,24 @@ export class PodHoldersService {
     return { message: 'Pod holder unassigned' };
   }
 
+  async updateWifi(id: string, ssid: string, password?: string) {
+    const holder = await this.prisma.podHolder.findUnique({
+      where: { pod_holder_id: id },
+    });
+
+    if (!holder) {
+      throw new NotFoundException('Pod holder not found');
+    }
+
+    return this.prisma.podHolder.update({
+      where: { pod_holder_id: id },
+      data: {
+        wifi_ssid: ssid,
+        wifi_password: password,
+      },
+    });
+  }
+
   private generateDeviceId(length = 5): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let result = '';

@@ -11,11 +11,11 @@ export class AllExceptionsFilter implements ExceptionFilter {
       exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
 
     const message =
-      exception instanceof HttpException ? exception.getResponse() : 'Internal server error';
+      exception instanceof HttpException ? exception.getResponse() : (exception as any)?.message || 'Internal server error';
 
     try {
       const fs = require('fs');
-      const logMsg = `[${new Date().toISOString()}] ${status} - ${JSON.stringify(message)} - ${req.url}\n`;
+      const logMsg = `[${new Date().toISOString()}] ${status} - ${JSON.stringify(message)} - ${req.url}${!(exception instanceof HttpException) ? '\nSTACK: ' + (exception as any)?.stack : ''}\n`;
       fs.appendFileSync('error-logs.txt', logMsg);
     } catch (e) {
       console.error('Failed to write log file', e);
