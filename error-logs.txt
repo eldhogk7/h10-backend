@@ -1,2 +1,5 @@
 [2026-02-18T07:27:02.421Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
 [2026-02-18T07:27:32.433Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-02-18T10:30:08.502Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-02-18T10:30:45.864Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
+[2026-02-18T10:35:07.267Z] 404 - {"message":"Cannot GET /uploads/1770959963526-369592942.jpg","error":"Not Found","statusCode":404} - /uploads/1770959963526-369592942.jpg
