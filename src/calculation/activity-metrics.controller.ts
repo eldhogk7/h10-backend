@@ -53,7 +53,7 @@ export class ActivityMetricsController {
         timeInRedZone: metrics.time_in_red_zone,
         percentInRedZone: metrics.percent_in_red_zone,
         hrRecoveryTime: metrics.hr_recovery_time,
-
+        exrId: metrics.exrId || metrics.exr_id,
         recordedAt: metrics.recorded_at || metrics.created_at,
       },
     );

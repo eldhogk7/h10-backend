@@ -5,7 +5,7 @@ import { randomUUID } from 'crypto';
 
 @Injectable()
 export class PodsService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) { }
 
   /* ================= CREATE SINGLE POD ================= */
   async create(dto: { model?: string; pod_holder_id: string }) {
@@ -152,25 +152,25 @@ export class PodsService {
     });
   }
   async findAvailablePodsForClub(clubId: string) {
-  return this.prisma.pod.findMany({
-    where: {
-      pod_holder: {
-        club_id: clubId,
+    return this.prisma.pod.findMany({
+      where: {
+        pod_holder: {
+          club_id: clubId,
+        },
+        player_pods: {
+          is: null, // 🔥 exclude assigned pods
+        },
+        lifecycle_status: {
+          in: ['ACTIVE', 'ASSIGNED'],
+        }, // pod is usable
       },
-      player_pods: {
-        none: {}, // 🔥 exclude assigned pods
+      select: {
+        pod_id: true,
+        serial_number: true,
       },
-      lifecycle_status: {
-        in: ['ACTIVE', 'ASSIGNED'],
-      }, // pod is usable
-    },
-    select: {
-      pod_id: true,
-      serial_number: true,
-    },
-    orderBy: {
-      serial_number: 'asc',
-    },
-  });
-}
+      orderBy: {
+        serial_number: 'asc',
+      },
+    });
+  }
 }

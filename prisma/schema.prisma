@@ -26,25 +26,25 @@ model SuperAdmin {
 }
 
 model Club {
-  club_id          String             @id @default(uuid()) @db.Uuid
-  super_admin_id   String?            @db.Uuid
+  club_id          String              @id @default(uuid()) @db.Uuid
+  super_admin_id   String?             @db.Uuid
   club_name        String?
   address          String?
-  status           String?            @default("active")
-  created_at       DateTime           @default(now()) @db.Timestamptz(6)
-  updated_at       DateTime           @default(now()) @db.Timestamptz(6)
+  status           String?             @default("active")
+  created_at       DateTime            @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime            @default(now()) @db.Timestamptz(6)
   sport            String?
   club_admins      ClubAdmin[]
+  hr_zone_defaults ClubHrZoneDefault[]
+  super_admin      SuperAdmin?         @relation("superadmin_clubs", fields: [super_admin_id], references: [super_admin_id])
   coaches          Coach[]
   events           Event[]
+  exerciseTypes    ExerciseType[]
   players          Player[]
   pod_holders      PodHolder[]
-  exerciseTypes    ExerciseType[]
-  teamThresholds   TeamThreshold[]
   serviceRequests  ServiceRequest[]
   subscriptions    Subscription[]
-  hr_zone_defaults ClubHrZoneDefault[]
-  super_admin      SuperAdmin?        @relation("superadmin_clubs", fields: [super_admin_id], references: [super_admin_id])
+  teamThresholds   TeamThreshold[]
 
   @@map("clubs")
 }
@@ -52,15 +52,14 @@ model Club {
 model TeamThreshold {
   threshold_id String   @id @default(uuid()) @db.Uuid
   club_id      String   @db.Uuid
-  type         String   // absolute or relative
-  zone_name    String   // Walk, Jog, Run, Sprint, High Intensity Sprint
+  type         String
+  zone_name    String
   min_val      Float
   max_val      Float
   is_default   Boolean  @default(true)
   created_at   DateTime @default(now()) @db.Timestamptz(6)
   updated_at   DateTime @default(now()) @updatedAt @db.Timestamptz(6)
-
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  club         Club     @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
 
   @@unique([club_id, type, zone_name])
   @@map("team_thresholds")
@@ -68,6 +67,8 @@ model TeamThreshold {
 
 model ExerciseType {
   exercise_type_id String   @id @default(uuid()) @db.Uuid
+  exrId            String   @unique @default(dbgenerated("generate_exr_id()")) @db.Char(5)   // NEW ⭐
+
   club_id          String   @db.Uuid
   name             String
   event_type       String   @default("training")
@@ -75,7 +76,9 @@ model ExerciseType {
   created_at       DateTime @default(now()) @db.Timestamptz(6)
   updated_at       DateTime @default(now()) @updatedAt @db.Timestamptz(6)
 
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  club            Club             @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  exercises       Exercise[]
+  activityMetrics ActivityMetric[]
 
   @@map("exercise_types")
 }
@@ -125,37 +128,30 @@ model Coach {
 }
 
 model Player {
-  player_id String @id @default(uuid()) @db.Uuid
-  club_id   String @db.Uuid
-
-  player_name   String?
-  jersey_number Int?
-  age           Int?
-  position      String?
-  heartrate     Int?
-  height        Float?
-  weight        Float?
-  phone         String?
-  player_image  String?
-
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @default(now()) @db.Timestamptz(6)
-
-  /**
-   * One-to-many
-   */
-  activity_metrics  ActivityMetric[]
-  hr_zones          HrZone[]
-  playerThresholds  PlayerThreshold[]
-
+  player_id          String             @id @default(uuid()) @db.Uuid
+  club_id            String             @db.Uuid
+  player_name        String?
+  jersey_number      Int?
+  age                Int?
+  position           String?
+  heartrate          Int?
+  height             Float?
+  weight             Float?
+  phone              String?
+  player_image       String?
+  created_at         DateTime           @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime           @default(now()) @db.Timestamptz(6)
+  activity_metrics   ActivityMetric[]
   coach_assignments  CoachAssignment[]
   event_participants EventParticipant[]
   exercise_players   ExercisePlayer[]
+  hr_zones           HrZone[]
   player_pod_holders PlayerPodHolder[]
   player_pods        PlayerPod[]
+  playerThresholds   PlayerThreshold[]
+  club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
   raw_data           RawData[]
 
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
   @@unique([club_id, jersey_number])
   @@map("players")
 }
@@ -163,42 +159,39 @@ model Player {
 model PlayerThreshold {
   threshold_id String   @id @default(uuid()) @db.Uuid
   player_id    String   @db.Uuid
-  type         String   // absolute or relative
-  zone_name    String   // Walk, Jog, Run, Sprint, High Intensity Sprint
+  type         String
+  zone_name    String
   min_val      Float
   max_val      Float
   created_at   DateTime @default(now()) @db.Timestamptz(6)
   updated_at   DateTime @default(now()) @updatedAt @db.Timestamptz(6)
-
-  player Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  player       Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
 
   @@unique([player_id, type, zone_name])
   @@map("player_thresholds")
 }
 
 model HrZone {
-  zone_id    String @id @default(uuid()) @db.Uuid
-  player_id  String @db.Uuid
+  zone_id     String @id @default(uuid()) @db.Uuid
+  player_id   String @db.Uuid
   zone_number Int
-  min_hr     Int
-  max_hr     Int
-
-  player Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  min_hr      Int
+  max_hr      Int
+  player      Player @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
 
   @@unique([player_id, zone_number])
   @@map("hr_zones")
 }
 
 model ClubHrZoneDefault {
-  zone_id     String @id @default(uuid()) @db.Uuid
-  club_id     String @db.Uuid
+  zone_id     String   @id @default(uuid()) @db.Uuid
+  club_id     String   @db.Uuid
   zone_number Int
   min_hr      Int
   max_hr      Int
   created_at  DateTime @default(now()) @db.Timestamptz(6)
   updated_at  DateTime @updatedAt @db.Timestamptz(6)
-
-  club Club @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  club        Club     @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
 
   @@unique([club_id, zone_number])
   @@map("club_hr_zone_defaults")
@@ -216,7 +209,7 @@ model Pod {
   created_at        DateTime              @default(now()) @db.Timestamptz(6)
   updated_at        DateTime              @updatedAt @db.Timestamptz(6)
   coach_assignments CoachAssignment[]
-  player_pods       PlayerPod[]
+  player_pods       PlayerPod?
   pod_allocations   PodAllocation[]
   newReplacements   PodReplacementAudit[] @relation("newPod")
   oldReplacements   PodReplacementAudit[] @relation("oldPod")
@@ -236,8 +229,8 @@ model PodHolder {
   club_id             String?               @db.Uuid
   created_at          DateTime              @default(now()) @db.Timestamptz(6)
   updated_at          DateTime              @updatedAt @db.Timestamptz(6)
-  wifi_ssid           String?
   wifi_password       String?
+  wifi_ssid           String?
   coach_assignments   CoachAssignment[]
   player_pod_holders  PlayerPodHolder[]
   audits              PodHolderAudit[]
@@ -316,12 +309,11 @@ model CoachAssignment {
 model PlayerPod {
   id            String   @id @default(uuid()) @db.Uuid
   player_id     String   @db.Uuid
-  pod_id        String   @db.Uuid
+  pod_id        String   @unique @db.Uuid
   assigned_date DateTime @default(now()) @db.Timestamptz(6)
   player        Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
   pod           Pod      @relation(fields: [pod_id], references: [pod_id], onDelete: Cascade)
 
-  @@unique([pod_id])
   @@index([player_id])
   @@index([pod_id])
   @@map("player_pods")
@@ -396,50 +388,54 @@ model RawData {
 
 model Event {
   event_id           String             @id @default(uuid()) @db.Uuid
-  sessionId          String?            @unique @map("session_id")
   club_id            String             @db.Uuid
   event_name         String?
   event_date         DateTime?
   location           String?
+  event_type         String?
+  created_at         DateTime           @default(now()) @db.Timestamptz(6)
+  file_end_ts        BigInt?
+  file_start_ts      BigInt?
+  sessionId          String?            @unique @map("session_id")
+  trim_end_ts        BigInt?
+  trim_start_ts      BigInt?
   ground_name        String?
   notes              String?
-  event_type         String?
-
-  file_start_ts      BigInt?
-  file_end_ts        BigInt?
-  trim_start_ts      BigInt?
-  trim_end_ts        BigInt?
-
-  created_at         DateTime           @default(now()) @db.Timestamptz(6)
-  event_participants EventParticipant[]
-  exercises          Exercise[]
   activity_metrics   ActivityMetric[]
+  event_participants EventParticipant[]
   club               Club               @relation(fields: [club_id], references: [club_id], onDelete: Cascade)
+  exercises          Exercise[]
 
   @@map("events")
 }
 
 model Exercise {
   exercise_id String @id @default(uuid()) @db.Uuid
-  event_id    String @db.Uuid
-  type        String
-  start_ts    BigInt
-  end_ts      BigInt
-  color       String?
 
-  event            Event            @relation(fields: [event_id], references: [event_id], onDelete: Cascade)
+  event_id String @db.Uuid
+  event    Event  @relation(fields: [event_id], references: [event_id], onDelete: Cascade)
+
+  sessionId String? @map("session_id") // NEW ⭐
+  exrId     String  @db.Char(5)        // NEW ⭐
+
+  start_ts BigInt
+  end_ts   BigInt
+  color    String?
+
+  exerciseType     ExerciseType     @relation(fields: [exrId], references: [exrId])
   exercise_players ExercisePlayer[]
 
+  @@index([sessionId])
+  @@index([exrId])
   @@map("exercises")
 }
 
 model ExercisePlayer {
-  id          String @id @default(uuid()) @db.Uuid
-  exercise_id String @db.Uuid
-  player_id   String @db.Uuid
-
-  exercise Exercise @relation(fields: [exercise_id], references: [exercise_id], onDelete: Cascade)
-  player   Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
+  id          String   @id @default(uuid()) @db.Uuid
+  exercise_id String   @db.Uuid
+  player_id   String   @db.Uuid
+  exercise    Exercise @relation(fields: [exercise_id], references: [exercise_id], onDelete: Cascade)
+  player      Player   @relation(fields: [player_id], references: [player_id], onDelete: Cascade)
 
   @@unique([exercise_id, player_id])
   @@map("exercise_players")
@@ -516,11 +512,11 @@ model ActivityMetric {
   sessionId String? @map("session_id")
   event     Event?  @relation(fields: [sessionId], references: [sessionId], onDelete: SetNull, onUpdate: Cascade)
 
-  /**
-   * FK → players.player_id (UUID stored as string in TS)
-   */
   playerId String @map("player_id") @db.Uuid
   player   Player @relation(fields: [playerId], references: [player_id], onDelete: Cascade)
+
+  exrId        String?       @db.Char(5) // NEW ⭐
+  exerciseType ExerciseType? @relation(fields: [exrId], references: [exrId])
 
   deviceId String? @map("device_id")
 
@@ -542,9 +538,10 @@ model ActivityMetric {
 
   recordedAt DateTime @map("recorded_at") @db.Timestamptz(6)
 
-  @@unique([sessionId, playerId])
+  @@unique([sessionId, playerId, exrId], name: "sessionId_playerId_exrId")
   @@index([playerId])
   @@index([recordedAt])
+  @@index([sessionId, exrId]) // IMPORTANT ⭐
   @@map("activity_metrics")
 }
 

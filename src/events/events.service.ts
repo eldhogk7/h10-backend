@@ -83,10 +83,25 @@ export class EventsService {
           });
 
           for (const ex of exercises) {
+            // 🔹 Find the exrId for this exercise name
+            const exType = await tx.exerciseType.findFirst({
+              where: {
+                club_id: event.club_id,
+                name: ex.type,
+              },
+              select: { exrId: true },
+            });
+
+            if (!exType) {
+              console.warn(`⚠️ [EventsService] No ExerciseType found for name: ${ex.type} in club: ${event.club_id}`);
+              continue; // Or handle error
+            }
+
             const newEx = await tx.exercise.create({
               data: {
                 event_id: event.event_id,
-                type: ex.type,
+                sessionId: event.sessionId,
+                exrId: exType.exrId,
                 start_ts: BigInt(Math.floor(Number(ex.start))),
                 end_ts: BigInt(Math.floor(Number(ex.end))),
                 color: ex.color,
@@ -189,7 +204,12 @@ export class EventsService {
         },
         exercises: {
           select: {
-            type: true,
+            exrId: true,
+            exerciseType: {
+              select: {
+                name: true,
+              }
+            }
           },
         },
       },
