@@ -25,69 +25,47 @@ export class ActivityMetricsService {
     const exrId = m.exrId || m.exr_id || null;
 
     try {
-      return this.prisma.activityMetric.upsert({
-        where: {
-          // ✅ compound unique key updated to include exrId
-          sessionId_playerId_exrId: {
-            sessionId,
-            playerId, // string UUID
-            exrId,
-          },
-        },
-
-        update: {
-          deviceId: m.deviceId,
-          exrId,
-          totalDistance: m.totalDistance,
-          hsrDistance: m.hsrDistance,
-          sprintDistance: m.sprintDistance,
-          topSpeed: m.topSpeed,
-          sprintCount: m.sprintCount,
-
-          acceleration: m.acceleration,
-          deceleration: m.deceleration,
-          maxAcceleration: m.maxAcceleration,
-          maxDeceleration: m.maxDeceleration,
-
-          playerLoad: m.playerLoad,
-          powerScore: m.powerScore,
-
-          hrMax: m.hrMax,
-          timeInRedZone: m.timeInRedZone,
-          percentInRedZone: m.percentInRedZone,
-          hrRecoveryTime: m.hrRecoveryTime,
-
-          recordedAt,
-        },
-
-        create: {
-          sessionId,
-          playerId,
-          deviceId: m.deviceId,
-          exrId,
-
-          totalDistance: m.totalDistance,
-          hsrDistance: m.hsrDistance,
-          sprintDistance: m.sprintDistance,
-          topSpeed: m.topSpeed,
-          sprintCount: m.sprintCount,
-
-          acceleration: m.acceleration,
-          deceleration: m.deceleration,
-          maxAcceleration: m.maxAcceleration,
-          maxDeceleration: m.maxDeceleration,
-
-          playerLoad: m.playerLoad,
-          powerScore: m.powerScore,
-
-          hrMax: m.hrMax,
-          timeInRedZone: m.timeInRedZone,
-          percentInRedZone: m.percentInRedZone,
-          hrRecoveryTime: m.hrRecoveryTime,
-
-          recordedAt,
-        },
+      // Prisma upsert does NOT support 'null' values in compound unique keys.
+      // We must manually check for existence when exrId can be null.
+      const existing = await this.prisma.activityMetric.findFirst({
+        where: { sessionId, playerId, exrId } as any,
       });
+
+      const data = {
+        deviceId: m.deviceId,
+        exrId,
+        totalDistance: m.totalDistance,
+        hsrDistance: m.hsrDistance,
+        sprintDistance: m.sprintDistance,
+        topSpeed: m.topSpeed,
+        sprintCount: m.sprintCount,
+        acceleration: m.acceleration,
+        deceleration: m.deceleration,
+        maxAcceleration: m.maxAcceleration,
+        maxDeceleration: m.maxDeceleration,
+        playerLoad: m.playerLoad,
+        powerScore: m.powerScore,
+        hrMax: m.hrMax,
+        timeInRedZone: m.timeInRedZone,
+        percentInRedZone: m.percentInRedZone,
+        hrRecoveryTime: m.hrRecoveryTime,
+        recordedAt,
+      };
+
+      if (existing) {
+        return this.prisma.activityMetric.update({
+          where: { id: existing.id },
+          data,
+        });
+      } else {
+        return this.prisma.activityMetric.create({
+          data: {
+            ...data,
+            sessionId,
+            playerId,
+          },
+        });
+      }
     } catch (err: any) {
       console.error('❌ [ActivityMetricsService] Error syncing metric:', err);
 
