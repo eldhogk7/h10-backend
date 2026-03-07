@@ -4887,3 +4887,284 @@ Argument `exrId` must not be null.
 [2026-03-06T10:07:14.154Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
 [2026-03-06T10:08:39.966Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
 [2026-03-06T10:14:00.916Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-07T08:32:12.683Z] 500 - "\nInvalid `tx.exercisePlayer.createMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\events\\events.service.ts:113:39\n\n  110 \n  111 if (ex.players && Array.isArray(ex.players)) {\n  112   // Note: player_id must be a valid UUID in the DB\n→ 113   await tx.exercisePlayer.createMany(\nForeign key constraint violated on the constraint: `exercise_players_player_id_fkey`" - /events/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `tx.exercisePlayer.createMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:39
+
+  110 
+  111 if (ex.players && Array.isArray(ex.players)) {
+  112   // Note: player_id must be a valid UUID in the DB
+→ 113   await tx.exercisePlayer.createMany(
+Foreign key constraint violated on the constraint: `exercise_players_player_id_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:15)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async EventsService.sync (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:44:14)
+    at async EventsController.sync (D:\jibinproject\h10\h10-backend\src\events\events.controller.ts:17:5)
+[2026-03-07T08:32:19.346Z] 500 - "\nInvalid `tx.exercisePlayer.createMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\events\\events.service.ts:113:39\n\n  110 \n  111 if (ex.players && Array.isArray(ex.players)) {\n  112   // Note: player_id must be a valid UUID in the DB\n→ 113   await tx.exercisePlayer.createMany(\nForeign key constraint violated on the constraint: `exercise_players_player_id_fkey`" - /events/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `tx.exercisePlayer.createMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:39
+
+  110 
+  111 if (ex.players && Array.isArray(ex.players)) {
+  112   // Note: player_id must be a valid UUID in the DB
+→ 113   await tx.exercisePlayer.createMany(
+Foreign key constraint violated on the constraint: `exercise_players_player_id_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:15)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async EventsService.sync (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:44:14)
+    at async EventsController.sync (D:\jibinproject\h10\h10-backend\src\events\events.controller.ts:17:5)
+[2026-03-07T08:32:19.768Z] 500 - "\nInvalid `tx.exercisePlayer.createMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\events\\events.service.ts:113:39\n\n  110 \n  111 if (ex.players && Array.isArray(ex.players)) {\n  112   // Note: player_id must be a valid UUID in the DB\n→ 113   await tx.exercisePlayer.createMany(\nForeign key constraint violated on the constraint: `exercise_players_player_id_fkey`" - /events/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `tx.exercisePlayer.createMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:39
+
+  110 
+  111 if (ex.players && Array.isArray(ex.players)) {
+  112   // Note: player_id must be a valid UUID in the DB
+→ 113   await tx.exercisePlayer.createMany(
+Foreign key constraint violated on the constraint: `exercise_players_player_id_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:15)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async EventsService.sync (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:44:14)
+    at async EventsController.sync (D:\jibinproject\h10\h10-backend\src\events\events.controller.ts:17:5)
+[2026-03-07T08:32:23.059Z] 500 - "\nInvalid `tx.exercisePlayer.createMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\events\\events.service.ts:113:39\n\n  110 \n  111 if (ex.players && Array.isArray(ex.players)) {\n  112   // Note: player_id must be a valid UUID in the DB\n→ 113   await tx.exercisePlayer.createMany(\nForeign key constraint violated on the constraint: `exercise_players_player_id_fkey`" - /events/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `tx.exercisePlayer.createMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:39
+
+  110 
+  111 if (ex.players && Array.isArray(ex.players)) {
+  112   // Note: player_id must be a valid UUID in the DB
+→ 113   await tx.exercisePlayer.createMany(
+Foreign key constraint violated on the constraint: `exercise_players_player_id_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:15)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async EventsService.sync (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:44:14)
+    at async EventsController.sync (D:\jibinproject\h10\h10-backend\src\events\events.controller.ts:17:5)
+[2026-03-07T08:32:29.409Z] 404 - {"message":"Cannot GET /uploads/1772598275080-767248979.jpg","error":"Not Found","statusCode":404} - /uploads/1772598275080-767248979.jpg
+[2026-03-07T08:32:29.451Z] 500 - "\nInvalid `tx.exercisePlayer.createMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\events\\events.service.ts:113:39\n\n  110 \n  111 if (ex.players && Array.isArray(ex.players)) {\n  112   // Note: player_id must be a valid UUID in the DB\n→ 113   await tx.exercisePlayer.createMany(\nForeign key constraint violated on the constraint: `exercise_players_player_id_fkey`" - /events/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `tx.exercisePlayer.createMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:39
+
+  110 
+  111 if (ex.players && Array.isArray(ex.players)) {
+  112   // Note: player_id must be a valid UUID in the DB
+→ 113   await tx.exercisePlayer.createMany(
+Foreign key constraint violated on the constraint: `exercise_players_player_id_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:113:15)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async EventsService.sync (D:\jibinproject\h10\h10-backend\src\events\events.service.ts:44:14)
+    at async EventsController.sync (D:\jibinproject\h10\h10-backend\src\events\events.controller.ts:17:5)
+[2026-03-07T08:32:29.615Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T08:32:31.065Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T08:32:35.932Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T09:00:28.612Z] 500 - "\nInvalid `this.prisma.pod.update()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pods\\pods.service.ts:106:28\n\n  103   throw new BadRequestException('Pod not found');\n  104 }\n  105 \n→ 106 return this.prisma.pod.update({\n        where: {\n          pod_id: \"b08f0e7f-b9bb-4343-bfee-027d45cf8ec1\"\n        },\n        data: {\n          lifecycle_status: \"SCRAP\",\n                            ~~~~~~~\n          updated_at: new Date(\"2026-03-07T09:00:28.563Z\")\n        }\n      })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pods/b08f0e7f-b9bb-4343-bfee-027d45cf8ec1/status
+STACK: PrismaClientValidationError: 
+Invalid `this.prisma.pod.update()` invocation in
+D:\jibinproject\h10\h10-backend\src\pods\pods.service.ts:106:28
+
+  103   throw new BadRequestException('Pod not found');
+  104 }
+  105 
+→ 106 return this.prisma.pod.update({
+        where: {
+          pod_id: "b08f0e7f-b9bb-4343-bfee-027d45cf8ec1"
+        },
+        data: {
+          lifecycle_status: "SCRAP",
+                            ~~~~~~~
+          updated_at: new Date("2026-03-07T09:00:28.563Z")
+        }
+      })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+[2026-03-07T09:00:37.768Z] 500 - "\nInvalid `this.prisma.pod.update()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pods\\pods.service.ts:106:28\n\n  103   throw new BadRequestException('Pod not found');\n  104 }\n  105 \n→ 106 return this.prisma.pod.update({\n        where: {\n          pod_id: \"b08f0e7f-b9bb-4343-bfee-027d45cf8ec1\"\n        },\n        data: {\n          lifecycle_status: \"SCRAP\",\n                            ~~~~~~~\n          updated_at: new Date(\"2026-03-07T09:00:37.766Z\")\n        }\n      })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pods/b08f0e7f-b9bb-4343-bfee-027d45cf8ec1/status
+STACK: PrismaClientValidationError: 
+Invalid `this.prisma.pod.update()` invocation in
+D:\jibinproject\h10\h10-backend\src\pods\pods.service.ts:106:28
+
+  103   throw new BadRequestException('Pod not found');
+  104 }
+  105 
+→ 106 return this.prisma.pod.update({
+        where: {
+          pod_id: "b08f0e7f-b9bb-4343-bfee-027d45cf8ec1"
+        },
+        data: {
+          lifecycle_status: "SCRAP",
+                            ~~~~~~~
+          updated_at: new Date("2026-03-07T09:00:37.766Z")
+        }
+      })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+[2026-03-07T09:00:48.222Z] 500 - "\nInvalid `this.prisma.pod.update()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pods\\pods.service.ts:106:28\n\n  103   throw new BadRequestException('Pod not found');\n  104 }\n  105 \n→ 106 return this.prisma.pod.update({\n        where: {\n          pod_id: \"b08f0e7f-b9bb-4343-bfee-027d45cf8ec1\"\n        },\n        data: {\n          lifecycle_status: \"SCRAP\",\n                            ~~~~~~~\n          updated_at: new Date(\"2026-03-07T09:00:48.219Z\")\n        }\n      })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pods/b08f0e7f-b9bb-4343-bfee-027d45cf8ec1/status
+STACK: PrismaClientValidationError: 
+Invalid `this.prisma.pod.update()` invocation in
+D:\jibinproject\h10\h10-backend\src\pods\pods.service.ts:106:28
+
+  103   throw new BadRequestException('Pod not found');
+  104 }
+  105 
+→ 106 return this.prisma.pod.update({
+        where: {
+          pod_id: "b08f0e7f-b9bb-4343-bfee-027d45cf8ec1"
+        },
+        data: {
+          lifecycle_status: "SCRAP",
+                            ~~~~~~~
+          updated_at: new Date("2026-03-07T09:00:48.219Z")
+        }
+      })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+[2026-03-07T09:01:03.043Z] 500 - "\nInvalid `tx.pod.updateMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pod-holders\\pod-holders.service.ts:248:22\n\n  245     },\n  246   });\n  247 } else {\n→ 248   await tx.pod.updateMany({\n          where: {\n            pod_holder_id: \"ce82a914-c46d-46b3-a9c2-9e53fe1ffded\"\n          },\n          data: {\n            lifecycle_status: \"SCRAP\",\n                              ~~~~~~~\n            updated_at: new Date(\"2026-03-07T09:01:03.024Z\")\n          }\n        })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pod-holders/ce82a914-c46d-46b3-a9c2-9e53fe1ffded/status
+STACK: PrismaClientValidationError: 
+Invalid `tx.pod.updateMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:22
+
+  245     },
+  246   });
+  247 } else {
+→ 248   await tx.pod.updateMany({
+          where: {
+            pod_holder_id: "ce82a914-c46d-46b3-a9c2-9e53fe1ffded"
+          },
+          data: {
+            lifecycle_status: "SCRAP",
+                              ~~~~~~~
+            updated_at: new Date("2026-03-07T09:01:03.024Z")
+          }
+        })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:9)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async PodHoldersService.updateStatus (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:236:5)
+[2026-03-07T09:01:10.419Z] 500 - "\nInvalid `tx.pod.updateMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pod-holders\\pod-holders.service.ts:248:22\n\n  245     },\n  246   });\n  247 } else {\n→ 248   await tx.pod.updateMany({\n          where: {\n            pod_holder_id: \"ce82a914-c46d-46b3-a9c2-9e53fe1ffded\"\n          },\n          data: {\n            lifecycle_status: \"SCRAP\",\n                              ~~~~~~~\n            updated_at: new Date(\"2026-03-07T09:01:10.417Z\")\n          }\n        })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pod-holders/ce82a914-c46d-46b3-a9c2-9e53fe1ffded/status
+STACK: PrismaClientValidationError: 
+Invalid `tx.pod.updateMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:22
+
+  245     },
+  246   });
+  247 } else {
+→ 248   await tx.pod.updateMany({
+          where: {
+            pod_holder_id: "ce82a914-c46d-46b3-a9c2-9e53fe1ffded"
+          },
+          data: {
+            lifecycle_status: "SCRAP",
+                              ~~~~~~~
+            updated_at: new Date("2026-03-07T09:01:10.417Z")
+          }
+        })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:9)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async PodHoldersService.updateStatus (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:236:5)
+[2026-03-07T09:03:04.110Z] 500 - "\nInvalid `this.prisma.pod.update()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pods\\pods.service.ts:106:28\n\n  103   throw new BadRequestException('Pod not found');\n  104 }\n  105 \n→ 106 return this.prisma.pod.update({\n        where: {\n          pod_id: \"dadb2aa7-2349-43a8-b753-168e9a1d952b\"\n        },\n        data: {\n          lifecycle_status: \"SCRAP\",\n                            ~~~~~~~\n          updated_at: new Date(\"2026-03-07T09:03:04.024Z\")\n        }\n      })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pods/dadb2aa7-2349-43a8-b753-168e9a1d952b/status
+STACK: PrismaClientValidationError: 
+Invalid `this.prisma.pod.update()` invocation in
+D:\jibinproject\h10\h10-backend\src\pods\pods.service.ts:106:28
+
+  103   throw new BadRequestException('Pod not found');
+  104 }
+  105 
+→ 106 return this.prisma.pod.update({
+        where: {
+          pod_id: "dadb2aa7-2349-43a8-b753-168e9a1d952b"
+        },
+        data: {
+          lifecycle_status: "SCRAP",
+                            ~~~~~~~
+          updated_at: new Date("2026-03-07T09:03:04.024Z")
+        }
+      })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+[2026-03-07T09:03:17.119Z] 500 - "\nInvalid `tx.pod.updateMany()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\pod-holders\\pod-holders.service.ts:248:22\n\n  245     },\n  246   });\n  247 } else {\n→ 248   await tx.pod.updateMany({\n          where: {\n            pod_holder_id: \"6d32a1ad-b3c0-467b-a063-ab91e1bab46b\"\n          },\n          data: {\n            lifecycle_status: \"SCRAP\",\n                              ~~~~~~~\n            updated_at: new Date(\"2026-03-07T09:03:17.098Z\")\n          }\n        })\n\nInvalid value for argument `lifecycle_status`. Expected PodLifecycleStatus." - /pod-holders/6d32a1ad-b3c0-467b-a063-ab91e1bab46b/status
+STACK: PrismaClientValidationError: 
+Invalid `tx.pod.updateMany()` invocation in
+D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:22
+
+  245     },
+  246   });
+  247 } else {
+→ 248   await tx.pod.updateMany({
+          where: {
+            pod_holder_id: "6d32a1ad-b3c0-467b-a063-ab91e1bab46b"
+          },
+          data: {
+            lifecycle_status: "SCRAP",
+                              ~~~~~~~
+            updated_at: new Date("2026-03-07T09:03:17.098Z")
+          }
+        })
+
+Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
+    at throwValidationException (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\core\errorRendering\throwValidationException.ts:45:9)
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async <anonymous> (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:248:9)
+    at async Proxy._transactionWithCallback (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:722:18)
+    at async PodHoldersService.updateStatus (D:\jibinproject\h10\h10-backend\src\pod-holders\pod-holders.service.ts:236:5)
+[2026-03-07T09:25:21.748Z] 404 - {"message":"Cannot PATCH /api/pod-holders/00000000-0000-0000-0000-000000000000/status","error":"Not Found","statusCode":404} - /api/pod-holders/00000000-0000-0000-0000-000000000000/status
+[2026-03-07T09:26:04.365Z] 404 - {"message":"Cannot GET /api/pod-holders/unassigned","error":"Not Found","statusCode":404} - /api/pod-holders/unassigned
+[2026-03-07T09:27:07.976Z] 404 - {"message":"Cannot GET /api/pod-holders/unassigned","error":"Not Found","statusCode":404} - /api/pod-holders/unassigned

@@ -19,12 +19,8 @@ export class PodHoldersService {
   /* ================= CREATE POD HOLDER ================= */
 
   async create(dto: CreatePodHolderDto) {
-    // ✅ Validate pods only
-    if (!dto.podIds || dto.podIds.length < 1) {
-      throw new BadRequestException(
-        'Pod holder must have at least 1 pod',
-      );
-    }
+    // ✅ No strict validation for podIds - allow empty
+    const podIds = dto.podIds || [];
 
     return this.prisma.$transaction(async tx => {
       const serialNumber = `PH-${randomUUID()
@@ -38,27 +34,30 @@ export class PodHoldersService {
         },
       });
 
-      const updated = await tx.pod.updateMany({
-        where: {
-          pod_id: { in: dto.podIds },
-          pod_holder_id: null,
-          lifecycle_status: {
-            in: [
-              PodLifecycleStatus.ACTIVE,
-              PodLifecycleStatus.MAINTENANCE,
-            ],
+      if (podIds.length > 0) {
+        const updated = await tx.pod.updateMany({
+          where: {
+            pod_id: { in: podIds },
+            pod_holder_id: null,
+            lifecycle_status: {
+              in: [
+                PodLifecycleStatus.ACTIVE,
+                PodLifecycleStatus.MAINTENANCE,
+              ],
+            },
           },
-        },
-        data: {
-          pod_holder_id: podHolder.pod_holder_id,
-          lifecycle_status: PodLifecycleStatus.ASSIGNED,
-        },
-      });
+          data: {
+            pod_holder_id: podHolder.pod_holder_id,
+            lifecycle_status: PodLifecycleStatus.ASSIGNED,
+            updated_at: new Date(),
+          },
+        });
 
-      if (updated.count !== dto.podIds.length) {
-        throw new BadRequestException(
-          'Some pods are already assigned or invalid',
-        );
+        if (updated.count !== podIds.length) {
+          throw new BadRequestException(
+            'Some pods are already assigned or invalid',
+          );
+        }
       }
 
       return podHolder;
@@ -91,11 +90,17 @@ export class PodHoldersService {
           select: {
             pod_id: true,
             serial_number: true,
+            device_id: true,
             lifecycle_status: true,
+            updated_at: true,
           },
         },
         club: {
           select: { club_name: true },
+        },
+        pod_holder_statuses: {
+          orderBy: { created_at: 'desc' },
+          take: 1,
         },
       },
       orderBy: { created_at: 'desc' },
@@ -162,6 +167,10 @@ export class PodHoldersService {
           },
         },
         club: { select: { club_name: true } },
+        pod_holder_statuses: {
+          orderBy: { created_at: 'desc' },
+          take: 1,
+        },
       },
     });
 
@@ -240,12 +249,16 @@ export class PodHoldersService {
           data: {
             pod_holder_id: null,
             lifecycle_status: 'ACTIVE',
+            updated_at: new Date(),
           },
         });
       } else {
         await tx.pod.updateMany({
           where: { pod_holder_id: podHolderId },
-          data: { lifecycle_status: status },
+          data: {
+            lifecycle_status: status,
+            updated_at: new Date(),
+          },
         });
       }
 
@@ -329,6 +342,7 @@ export class PodHoldersService {
         data: {
           pod_holder_id: null,
           lifecycle_status: 'ACTIVE',
+          updated_at: new Date(),
         },
       }),
       this.prisma.podHolder.delete({

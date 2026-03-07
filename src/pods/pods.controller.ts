@@ -15,31 +15,28 @@ import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
 @Controller('pods')
 export class PodsController {
-  constructor(private readonly svc: PodsService) {}
+  constructor(private readonly svc: PodsService) { }
 
   /* ================= CREATE SINGLE POD ================= */
   @Post()
   async create(@Body() dto: CreatePodDto) {
-    const pod = await this.svc.create(dto);
-    return { data: pod };
+    return this.svc.create(dto);
   }
 
   /* ================= CREATE PODS IN ONE BATCH ================= */
   @Post('batch')
   async createBatch(
-    @Body() body: { count: number; pod_holder_id: string; model?: string },
+    @Body() body: { count: number; pod_holder_id?: string; model?: string },
   ) {
     if (!body.count || body.count <= 0) {
       throw new BadRequestException('count must be greater than 0');
     }
 
-    const result = await this.svc.createMany(
+    return this.svc.createMany(
       body.count,
       body.pod_holder_id,
       body.model,
     );
-
-    return { data: result };
   }
   /* ================= GET PODS FOR LOGGED-IN CLUB ================= */
   @UseGuards(JwtAuthGuard)
@@ -51,14 +48,12 @@ export class PodsController {
       throw new BadRequestException('Club not found for user');
     }
 
-    const pods = await this.svc.findAvailablePodsForClub(clubId);
-    return { data: pods };
+    return this.svc.findAvailablePodsForClub(clubId);
   }
   /* ================= GET ALL PODS ================= */
   @Get()
   async findAll() {
-    const pods = await this.svc.findAll();
-    return { data: pods };
+    return this.svc.findAll();
   }
 
   /* ================= GET PODS BY BATCH ================= */
@@ -68,8 +63,7 @@ export class PodsController {
       throw new BadRequestException('batch_id is required');
     }
 
-    const pods = await this.svc.findByBatch(batch_id);
-    return { data: pods };
+    return this.svc.findByBatch(batch_id);
   }
 
   /* ================= UPDATE POD STATUS ================= */
@@ -82,7 +76,6 @@ export class PodsController {
       throw new BadRequestException('status is required');
     }
 
-    const pod = await this.svc.updateStatus(id, body.status);
-    return { data: pod };
+    return this.svc.updateStatus(id, body.status);
   }
 }

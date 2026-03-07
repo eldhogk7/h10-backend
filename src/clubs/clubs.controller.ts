@@ -18,15 +18,14 @@ import { Roles } from '../auth/decorators/roles.decorator';
 
 @Controller('clubs')
 export class ClubsController {
-  constructor(private readonly svc: ClubsService) {}
+  constructor(private readonly svc: ClubsService) { }
 
   /* ================= AVAILABLE CLUBS ================= */
 
   @UseGuards(JwtAuthGuard)
   @Get('available')
   async getAvailableClubs() {
-    const clubs = await this.svc.findAvailable();
-    return { data: clubs };
+    return this.svc.findAvailable();
   }
 
   /* ================= CREATE CLUB ================= */
@@ -46,11 +45,11 @@ export class ClubsController {
   }
 
   /* ================= UNASSIGNED POD HOLDERS ================= */
-    @UseGuards(JwtAuthGuard)
-    @Get('unassigned-pod-holders')
-    getUnassignedPodHolders() {
-      return this.svc.findUnassignedPodHolders();
-    }
+  @UseGuards(JwtAuthGuard)
+  @Get('unassigned-pod-holders')
+  getUnassignedPodHolders() {
+    return this.svc.findUnassignedPodHolders();
+  }
 
 
   /* ================= UPDATE CLUB ================= */

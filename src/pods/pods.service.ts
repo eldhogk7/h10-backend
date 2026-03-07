@@ -38,7 +38,7 @@ export class PodsService {
   /* ================= CREATE MULTIPLE PODS ================= */
   async createMany(
     count: number,
-    pod_holder_id: string,
+    pod_holder_id?: string,
     model?: string,
   ) {
     if (!count || count <= 0) {
@@ -67,7 +67,7 @@ export class PodsService {
         serial_number: this.generatePodSerialNumber(),
         device_id: this.generateDeviceId(5),
         lifecycle_status: 'ACTIVE',
-        pod_holder_id,
+        pod_holder_id: pod_holder_id || null,
       });
     }
 

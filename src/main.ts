@@ -8,8 +8,14 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  console.log('CWD:', process.cwd());
+  console.log('Uploads path:', join(process.cwd(), 'uploads'));
   app.useStaticAssets(join(process.cwd(), 'uploads'), {
     prefix: '/uploads/',
+    setHeaders: (res) => {
+      res.set('Access-Control-Allow-Origin', '*');
+      res.set('Cross-Origin-Resource-Policy', 'cross-origin');
+    },
   });
 
   app.enableCors();
@@ -17,7 +23,8 @@ async function bootstrap() {
   app.useGlobalFilters(new AllExceptionsFilter());
   app.useGlobalInterceptors(new ResponseInterceptor());
 
-  const port = process.env.PORT || 3000;
+  // Backend port updated to 5001 to avoid conflict with frontend (3000)
+  const port = process.env.PORT || 5001;
   await app.listen(port, '0.0.0.0');
   console.log(`Server running on http://0.0.0.0:${port}`);
 }

@@ -4,7 +4,7 @@ import { hashPassword } from '../common/utils/password.util';
 import { UpdateSuperAdminDto } from './dto/update-super-admin.dto';
 @Injectable()
 export class SuperAdminService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) { }
 
   async create(dto: any) {
     const password_hash = await hashPassword(dto.password);
@@ -43,20 +43,20 @@ export class SuperAdminService {
     });
   }
   async updateProfile(id: string, dto: UpdateSuperAdminDto) {
-  const updated = await this.prisma.superAdmin.update({
-    where: { super_admin_id: id },
-    data: {
-      // Prisma ignores undefined, only updates what you send
-      name: dto.name,
-      email: dto.email,
-      phone: dto.phone,
-      profile_image: dto.profile_image,
-    },
-  });
+    const updated = await this.prisma.superAdmin.update({
+      where: { super_admin_id: id },
+      data: {
+        // Prisma ignores undefined, only updates what you send
+        name: dto.name,
+        email: dto.email,
+        phone: dto.phone,
+        profile_image: dto.profile_image,
+      },
+    });
 
-  delete (updated as any).password_hash;
-  return updated;
-}
+    delete (updated as any).password_hash;
+    return updated;
+  }
   async getDashboardStats() {
     const now = new Date();
 
