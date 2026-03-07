@@ -4855,3 +4855,35 @@ Argument `exrId` must not be null.
 [2026-02-23T06:11:45.223Z] 400 - {"message":"Pod already assigned","error":"Bad Request","statusCode":400} - /players/bf619baa-8179-45eb-b298-c23f9243743e/assign-pod
 [2026-02-23T06:11:45.283Z] 400 - {"message":"Pod already assigned","error":"Bad Request","statusCode":400} - /players/bf619baa-8179-45eb-b298-c23f9243743e/assign-pod
 [2026-02-23T06:11:45.284Z] 400 - {"message":"Pod already assigned","error":"Bad Request","statusCode":400} - /players/bf619baa-8179-45eb-b298-c23f9243743e/assign-pod
+[2026-03-03T10:32:36.351Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-03T10:33:02.310Z] 404 - {"message":"Cannot GET /uploads/1772440636706-49288435.jpg","error":"Not Found","statusCode":404} - /uploads/1772440636706-49288435.jpg
+[2026-03-03T10:33:11.515Z] 404 - {"message":"Cannot GET /uploads/1772440636706-49288435.jpg","error":"Not Found","statusCode":404} - /uploads/1772440636706-49288435.jpg
+[2026-03-03T10:33:12.181Z] 404 - {"message":"Cannot GET /uploads/1772440636706-49288435.jpg","error":"Not Found","statusCode":404} - /uploads/1772440636706-49288435.jpg
+[2026-03-03T10:33:36.090Z] 404 - {"message":"Cannot GET /uploads/1772440636706-49288435.jpg","error":"Not Found","statusCode":404} - /uploads/1772440636706-49288435.jpg
+[2026-03-03T10:54:36.529Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-03T10:56:25.348Z] 404 - {"message":"Cannot GET /uploads/1772440636706-49288435.jpg","error":"Not Found","statusCode":404} - /uploads/1772440636706-49288435.jpg
+[2026-03-03T10:56:25.425Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-03T10:56:28.365Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-03T10:56:31.199Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-03T10:56:34.850Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-03T11:10:28.338Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-04T04:24:11.966Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-04T04:24:18.915Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-04T04:24:35.663Z] 404 - {"message":"Cannot GET /uploads/d392d368-71c9-491a-b86f-89e5b15b1576-1_all_26103.jpg","error":"Not Found","statusCode":404} - /uploads/d392d368-71c9-491a-b86f-89e5b15b1576-1_all_26103.jpg
+[2026-03-04T08:30:00.249Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-04T08:31:30.085Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-04T08:31:40.069Z] 404 - {"message":"Cannot GET /uploads/1772010544557-347940323.jpg","error":"Not Found","statusCode":404} - /uploads/1772010544557-347940323.jpg
+[2026-03-04T08:33:12.264Z] 404 - {"message":"Cannot GET /uploads/1772010544557-347940323.jpg","error":"Not Found","statusCode":404} - /uploads/1772010544557-347940323.jpg
+[2026-03-05T04:45:02.212Z] 400 - {"message":"Pod already assigned","error":"Bad Request","statusCode":400} - /players/bf619baa-8179-45eb-b298-c23f9243743e/assign-pod
+[2026-03-05T04:47:08.293Z] 400 - {"message":"This pod is already assigned to another player","error":"Bad Request","statusCode":400} - /players
+[2026-03-05T04:48:21.501Z] 400 - {"message":["age must be an integer number","jersey_number must be an integer number"],"error":"Bad Request","statusCode":400} - /players
+[2026-03-05T04:48:54.939Z] 400 - {"message":"Jersey number already exists in this club","error":"Bad Request","statusCode":400} - /players
+[2026-03-05T04:49:03.245Z] 400 - {"message":"Jersey number already exists in this club","error":"Bad Request","statusCode":400} - /players
+[2026-03-05T04:49:24.816Z] 400 - {"message":"This pod is already assigned to another player","error":"Bad Request","statusCode":400} - /players
+[2026-03-06T05:32:00.221Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-06T05:32:54.036Z] 404 - {"message":"Cannot GET /uploads/1772010544557-347940323.jpg","error":"Not Found","statusCode":404} - /uploads/1772010544557-347940323.jpg
+[2026-03-06T05:32:57.202Z] 404 - {"message":"Cannot GET /uploads/1772010544557-347940323.jpg","error":"Not Found","statusCode":404} - /uploads/1772010544557-347940323.jpg
+[2026-03-06T09:35:03.628Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-06T10:07:14.154Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-06T10:08:39.966Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-06T10:14:00.916Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp

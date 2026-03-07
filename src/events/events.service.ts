@@ -205,6 +205,8 @@ export class EventsService {
         exercises: {
           select: {
             exrId: true,
+            start_ts: true,
+            end_ts: true,
             exerciseType: {
               select: {
                 name: true,
