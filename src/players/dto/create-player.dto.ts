@@ -1,4 +1,4 @@
-import { IsInt, IsOptional, IsString, IsUUID, IsNumber } from 'class-validator';
+import { IsInt, IsOptional, IsString, IsUUID, IsNumber, IsArray } from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class CreatePlayerDto {
@@ -38,4 +38,8 @@ export class CreatePlayerDto {
   @IsOptional()
   @IsUUID()
   pod_id?: string;
+
+  @IsOptional()
+  @IsArray()
+  hr_zones?: any[];
 }

@@ -5168,3 +5168,50 @@ Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
 [2026-03-07T09:25:21.748Z] 404 - {"message":"Cannot PATCH /api/pod-holders/00000000-0000-0000-0000-000000000000/status","error":"Not Found","statusCode":404} - /api/pod-holders/00000000-0000-0000-0000-000000000000/status
 [2026-03-07T09:26:04.365Z] 404 - {"message":"Cannot GET /api/pod-holders/unassigned","error":"Not Found","statusCode":404} - /api/pod-holders/unassigned
 [2026-03-07T09:27:07.976Z] 404 - {"message":"Cannot GET /api/pod-holders/unassigned","error":"Not Found","statusCode":404} - /api/pod-holders/unassigned
+[2026-03-07T10:43:36.953Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-07T10:44:06.325Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-07T10:44:11.371Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:44:16.787Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:45:10.969Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:45:11.507Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:45:13.536Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:45:52.199Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T10:45:52.321Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T11:44:18.299Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T11:46:30.770Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T11:46:31.425Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T11:50:09.176Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-07T11:50:09.550Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:28:52.311Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:28:53.022Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:39:19.478Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:40:29.821Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:44:31.605Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:44:31.790Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T04:44:54.485Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T05:18:28.138Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T05:52:21.611Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T06:01:01.185Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T06:10:23.287Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T07:20:15.803Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T07:20:16.458Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:19:29.148Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:19:31.259Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:19:35.001Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:25:53.857Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:25:54.541Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:31:36.372Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:31:37.839Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:45:27.597Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:45:41.942Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:50:09.819Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:50:12.303Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:50:15.021Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:52:39.637Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:52:39.891Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T08:58:03.737Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-09T09:01:31.340Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-09T09:01:36.772Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-09T09:21:24.490Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-09T09:30:07.742Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-09T09:30:07.789Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders

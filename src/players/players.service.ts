@@ -102,7 +102,41 @@ export class PlayersService {
           },
         });
       }
-      return player;
+
+      // 4️⃣ Create HR zones (copy from club defaults or use dto)
+      const hrZonesToCreate = dto.hr_zones && Array.isArray(dto.hr_zones)
+        ? dto.hr_zones
+        : await tx.clubHrZoneDefault.findMany({ where: { club_id: clubId }, orderBy: { zone_number: 'asc' } });
+
+      if (hrZonesToCreate.length > 0) {
+        for (const zone of hrZonesToCreate) {
+          await tx.hrZone.create({
+            data: {
+              player_id: player.player_id,
+              zone_number: zone.zone || zone.zone_number,
+              min_hr: zone.min || zone.min_hr,
+              max_hr: zone.max || zone.max_hr,
+            },
+          });
+        }
+      }
+
+      // Re-fetch to include relations
+      return tx.player.findUnique({
+        where: { player_id: player.player_id },
+        include: {
+          player_pods: {
+            include: {
+              pod: {
+                include: {
+                  pod_holder: true,
+                },
+              },
+            },
+          },
+          hr_zones: true,
+        },
+      });
     });
   }
 

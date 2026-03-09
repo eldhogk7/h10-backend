@@ -144,10 +144,16 @@ export class PodsService {
       select: {
         pod_id: true,
         serial_number: true,
+        device_id: true,
         lifecycle_status: true,
+        pod_holder: {
+          select: {
+            serial_number: true,
+          },
+        },
       },
       orderBy: {
-        serial_number: 'asc',
+        serial_number: "asc",
       },
     });
   }
@@ -161,15 +167,21 @@ export class PodsService {
           is: null, // 🔥 exclude assigned pods
         },
         lifecycle_status: {
-          in: ['ACTIVE', 'ASSIGNED'],
+          in: ["ACTIVE", "ASSIGNED"],
         }, // pod is usable
       },
       select: {
         pod_id: true,
         serial_number: true,
+        device_id: true,
+        pod_holder: {
+          select: {
+            serial_number: true,
+          },
+        },
       },
       orderBy: {
-        serial_number: 'asc',
+        serial_number: "asc",
       },
     });
   }

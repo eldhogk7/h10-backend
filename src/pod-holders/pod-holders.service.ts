@@ -120,6 +120,7 @@ export class PodHoldersService {
           in: [
             PodLifecycleStatus.ACTIVE,
             PodLifecycleStatus.MAINTENANCE,
+            PodLifecycleStatus.REPAIRED,
           ],
         },
       },
