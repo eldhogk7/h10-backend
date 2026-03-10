@@ -5215,3 +5215,286 @@ Invalid value for argument `lifecycle_status`. Expected PodLifecycleStatus.
 [2026-03-09T09:21:24.490Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
 [2026-03-09T09:30:07.742Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
 [2026-03-09T09:30:07.789Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-09T10:26:02.426Z] 404 - {"message":"Cannot GET /uploads/1772598275080-767248979.jpg","error":"Not Found","statusCode":404} - /uploads/1772598275080-767248979.jpg
+[2026-03-09T10:26:02.930Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:26:03.369Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:26:07.448Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:28:25.838Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:28:48.627Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:28:48.858Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T10:28:50.527Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T11:19:14.792Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T11:19:14.999Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T11:19:16.309Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T12:10:06.508Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T12:10:07.973Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-09T13:05:26.163Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-09T13:05:26.371Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-09T13:05:30.315Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:13.729Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:14.180Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T04:24:14.230Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:14.479Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T04:24:20.003Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:26.465Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:28.877Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:31.587Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:24:34.793Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T04:55:46.757Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T04:55:46.856Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T05:05:54.511Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T05:07:02.025Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T05:07:02.149Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T05:09:42.255Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/258520ae-0253-414b-952a-2fcba16ba17b
+[2026-03-10T05:10:11.820Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/8d41ccee-cb3e-47c0-b652-c41ffeaf22f2
+[2026-03-10T05:10:11.824Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/8d41ccee-cb3e-47c0-b652-c41ffeaf22f2
+[2026-03-10T05:10:13.159Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/e916e217-69e3-40e9-970a-33dc5d6e6378
+[2026-03-10T05:10:14.353Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/192cd57a-c278-4e55-8e32-13488e2b712a
+[2026-03-10T05:10:14.357Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/8b282abc-1d04-4fc9-ad88-fc9ef3784cd0
+[2026-03-10T05:10:15.615Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/74b66c25-cdc5-4df9-80f0-ddf185d9fdd4
+[2026-03-10T05:10:17.310Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/4cb349d7-02a9-4936-99c7-7b39a4fde4bc
+[2026-03-10T05:10:30.429Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/18e3443a-d816-4de7-8598-c71d1cf0701a
+[2026-03-10T05:10:30.436Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/2a98abcc-115b-45c5-8cdf-9dbdc99ee5c3
+[2026-03-10T05:10:38.938Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/54cf5bcb-717c-4b74-887e-2e8f6dc8287f/remove-pod/9b48ac30-43d3-4cba-aa22-d1aa268cbdb5
+[2026-03-10T05:12:13.770Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/dfa4e548-fc98-455c-ac22-75a50e07791c
+[2026-03-10T05:12:15.094Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/dfa4e548-fc98-455c-ac22-75a50e07791c
+[2026-03-10T05:12:19.596Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/586a8d84-f764-406f-9058-9239cc44967c
+[2026-03-10T05:12:20.856Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/6b86828f-4dee-44ae-b8cf-4ca024cd68e0
+[2026-03-10T05:12:24.295Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c2791be7-419f-40df-91a8-cebf8e8ec366
+[2026-03-10T05:12:24.297Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c2791be7-419f-40df-91a8-cebf8e8ec366
+[2026-03-10T05:12:25.366Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/df8e8da6-a6b3-4729-a900-5c47c338bbaf
+[2026-03-10T05:12:25.394Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/093e7897-9fa6-4271-b22a-e55d384d8af3
+[2026-03-10T05:12:25.396Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/093e7897-9fa6-4271-b22a-e55d384d8af3
+[2026-03-10T05:12:26.377Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/093e7897-9fa6-4271-b22a-e55d384d8af3
+[2026-03-10T05:12:26.386Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c2791be7-419f-40df-91a8-cebf8e8ec366
+[2026-03-10T05:12:26.394Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c2791be7-419f-40df-91a8-cebf8e8ec366
+[2026-03-10T05:12:26.395Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c2791be7-419f-40df-91a8-cebf8e8ec366
+[2026-03-10T05:12:26.467Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/449a0276-4185-4135-b805-9ae238a45295
+[2026-03-10T05:12:26.510Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/449a0276-4185-4135-b805-9ae238a45295
+[2026-03-10T05:12:32.403Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/8a7f3a71-e937-48ea-bf08-037521fd1cb0
+[2026-03-10T05:12:32.410Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/8a7f3a71-e937-48ea-bf08-037521fd1cb0
+[2026-03-10T05:12:32.415Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/7e087639-8423-48ff-97eb-d81fdf5b1b59
+[2026-03-10T05:12:41.229Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/3647fdf7-a8fd-4897-9bff-c95edcf7ae7f
+[2026-03-10T05:12:42.377Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/e0db9376-c628-4e43-b145-840861f77ef1
+[2026-03-10T05:12:42.513Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/d6361ddb-91eb-416d-9512-364489c15442
+[2026-03-10T05:12:42.548Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/d6361ddb-91eb-416d-9512-364489c15442
+[2026-03-10T05:12:43.487Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/21bb157a-22ef-4883-9e68-722bc4497182
+[2026-03-10T05:12:43.516Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/18b8afbf-b530-4b72-8890-5372ecf8957f
+[2026-03-10T05:12:43.518Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/18b8afbf-b530-4b72-8890-5372ecf8957f
+[2026-03-10T05:12:44.478Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/1080192a-7cea-4396-95fa-3c4e00ed3c76
+[2026-03-10T05:12:45.974Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/af427054-01d2-4fb3-a29c-bae9eb05ba23
+[2026-03-10T05:12:47.421Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/b39b7ddc-fd60-48e7-8596-58dc011f3b57
+[2026-03-10T05:12:47.434Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/b39b7ddc-fd60-48e7-8596-58dc011f3b57
+[2026-03-10T05:12:49.112Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/bcdc0c51-a547-487e-af47-2d28934dbdc9
+[2026-03-10T05:12:49.113Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/bcdc0c51-a547-487e-af47-2d28934dbdc9
+[2026-03-10T05:12:50.181Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/243e588e-da87-4761-b880-90f7d2247a87
+[2026-03-10T05:12:50.399Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c601721d-74e6-4edc-8d7d-f49bada4f7e2
+[2026-03-10T05:12:50.427Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/c601721d-74e6-4edc-8d7d-f49bada4f7e2
+[2026-03-10T05:12:52.922Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/1c0e6672-6759-4cb4-99b5-a387a161b90f
+[2026-03-10T05:12:54.271Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/1c0e6672-6759-4cb4-99b5-a387a161b90f
+[2026-03-10T05:12:55.603Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/41b4e478-95ad-4efb-b0f4-782d3176efde
+[2026-03-10T05:12:55.614Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/f382ff8c-3894-433e-a3f3-dcbed034bd33
+[2026-03-10T05:12:55.618Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/f382ff8c-3894-433e-a3f3-dcbed034bd33
+[2026-03-10T05:12:57.199Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/4e628496-8d9a-4b31-ac17-293f35d299a8
+[2026-03-10T05:13:07.344Z] 404 - {"message":"Pod not found in this holder","error":"Not Found","statusCode":404} - /pod-holders/c7402a77-7108-4c00-902f-985f73420918/remove-pod/94c439bf-2bc2-4b8e-a706-fa48e9ac5d47
+[2026-03-10T05:14:01.435Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T05:14:01.522Z] 500 - "\nInvalid `this.prisma.activityMetric.create()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\calculation\\activity-metrics.service.ts:61:43\n\n  58     data,\n  59   });\n  60 } else {\n→ 61   return this.prisma.activityMetric.create(\nForeign key constraint violated on the constraint: `activity_metrics_exrId_fkey`" - /activity-metrics/sync
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.activityMetric.create()` invocation in
+D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.service.ts:61:43
+
+  58     data,
+  59   });
+  60 } else {
+→ 61   return this.prisma.activityMetric.create(
+Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async ActivityMetricsController.syncMetrics (D:\jibinproject\h10\h10-backend\src\calculation\activity-metrics.controller.ts:33:5)
+[2026-03-10T05:30:45.451Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:35:16.234Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:43:05.438Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-10T05:43:18.627Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:52:51.100Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:52:51.323Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:59:30.405Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T05:59:31.395Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:00:39.466Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:14:40.470Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:14:40.856Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:15:08.280Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:16:52.703Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:17:58.858Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T06:18:16.004Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:00:25.763Z] 400 - {"message":"Jersey number already exists in this club","error":"Bad Request","statusCode":400} - /players
+[2026-03-10T07:00:36.384Z] 400 - {"message":["jersey_number must be an integer number"],"error":"Bad Request","statusCode":400} - /players
+[2026-03-10T07:00:45.802Z] 400 - {"message":["jersey_number must be an integer number"],"error":"Bad Request","statusCode":400} - /players
+[2026-03-10T07:00:59.537Z] 400 - {"message":"This pod is already assigned to another player","error":"Bad Request","statusCode":400} - /players
+[2026-03-10T07:09:08.728Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:10:21.639Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:10:22.177Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:10:25.525Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:12:19.670Z] 400 - {"message":"This pod is already assigned to another player","error":"Bad Request","statusCode":400} - /players
+[2026-03-10T07:13:52.759Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T07:14:18.320Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:14:20.634Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:14:32.833Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:14:38.169Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:14:52.695Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:15:52.853Z] 401 - {"message":"Unauthorized","statusCode":401} - /clubs/e482adc7-10ab-47bf-992d-5d63c1206a79
+[2026-03-10T07:16:22.549Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T07:19:37.405Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:19:41.233Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:20:07.122Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:20:07.222Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:22:36.990Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T07:24:56.872Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:25:31.916Z] 403 - {"message":"Forbidden resource","error":"Forbidden","statusCode":403} - /players
+[2026-03-10T07:25:32.009Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T07:25:33.737Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-10T07:25:41.731Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-10T07:26:41.650Z] 401 - {"message":"Unauthorized","statusCode":401} - /clubs
+[2026-03-10T07:26:45.850Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-10T07:26:48.115Z] 401 - {"message":"Unauthorized","statusCode":401} - /clubs
+[2026-03-10T07:27:53.535Z] 403 - {"message":"Forbidden resource","error":"Forbidden","statusCode":403} - /players
+[2026-03-10T07:27:53.542Z] 403 - {"message":"Forbidden resource","error":"Forbidden","statusCode":403} - /players
+[2026-03-10T07:27:53.544Z] 403 - {"message":"Forbidden resource","error":"Forbidden","statusCode":403} - /players
+[2026-03-10T07:27:53.741Z] 401 - {"message":"Unauthorized","statusCode":401} - /players
+[2026-03-10T07:27:56.719Z] 401 - {"message":"Unauthorized","statusCode":401} - /pod-holders
+[2026-03-10T07:33:12.618Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:33:15.084Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:33:23.709Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-10T07:33:40.038Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:45:22.908Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:45:23.177Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:47:22.957Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T07:49:11.959Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
+[2026-03-10T07:49:12.007Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
