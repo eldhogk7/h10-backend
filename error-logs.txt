@@ -5498,3 +5498,90 @@ Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
 [2026-03-10T07:47:22.957Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
 [2026-03-10T07:49:11.959Z] 404 - {"message":"Cannot GET /uploads/1770887949950-809059401.jpg","error":"Not Found","statusCode":404} - /uploads/1770887949950-809059401.jpg
 [2026-03-10T07:49:12.007Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T10:06:49.669Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T10:06:50.035Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T10:06:55.303Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T10:06:58.667Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T10:07:17.225Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:26:18.783Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:26:19.109Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:26:24.939Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:26:28.449Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:27:03.425Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:28:42.778Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:29:19.590Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:35:20.414Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:35:47.089Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:44:08.273Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:44:10.173Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:44:54.663Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-10T11:53:09.592Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics
+[2026-03-10T11:53:09.702Z] 401 - {"message":"Unauthorized","statusCode":401} - /players
+[2026-03-10T11:53:10.132Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics
+[2026-03-10T11:53:10.248Z] 401 - {"message":"Unauthorized","statusCode":401} - /players
+[2026-03-10T11:53:25.253Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-10T11:54:09.381Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:44:50.975Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-11T04:45:00.677Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:45:18.443Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:48:15.390Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:48:15.506Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:48:24.822Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:51:59.085Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T04:51:59.709Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:06:14.338Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:06:14.537Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:06:39.036Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:06:39.388Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:25:37.774Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:25:39.903Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T05:25:41.839Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:04:59.156Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics
+[2026-03-11T07:04:59.479Z] 401 - {"message":"Unauthorized","statusCode":401} - /players
+[2026-03-11T07:04:59.786Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:04:59.871Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:04:59.924Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.137Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.360Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.437Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.528Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.686Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.806Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:00.897Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:01.037Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics/sync
+[2026-03-11T07:05:01.147Z] 401 - {"message":"Unauthorized","statusCode":401} - /activity-metrics
+[2026-03-11T07:05:01.235Z] 401 - {"message":"Unauthorized","statusCode":401} - /players
+[2026-03-11T07:05:04.085Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-11T07:05:35.919Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-11T07:06:11.289Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-11T07:06:52.698Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:25:29.890Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:25:37.669Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:25:40.635Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:25:42.587Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:37:09.365Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T07:37:11.137Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:05:56.056Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:08:13.839Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:08:15.826Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:30:34.947Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:30:35.902Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:31:19.695Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T09:31:21.844Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:10:41.335Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:10:43.114Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:11:59.778Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-11T10:12:47.339Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:21:43.698Z] 401 - {"message":"Invalid or expired OTP","error":"Unauthorized","statusCode":401} - /auth/verify-login-otp
+[2026-03-11T10:22:01.120Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:07.069Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:08.951Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:10.706Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:16.701Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:22.048Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:24.075Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:25.765Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:30.528Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:22:41.170Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-11T10:23:00.617Z] 401 - {"message":"Missing token","error":"Unauthorized","statusCode":401} - /auth/profile
+[2026-03-11T10:24:43.397Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
