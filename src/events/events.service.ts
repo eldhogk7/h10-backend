@@ -189,8 +189,10 @@ export class EventsService {
     });
   }
 
-  findAll() {
+  findAll(clubId?: string) {
+    const where = clubId ? { club_id: clubId } : {};
     return this.prisma.event.findMany({
+      where,
       include: {
         event_participants: {
           include: {
