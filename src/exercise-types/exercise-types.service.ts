@@ -36,7 +36,7 @@ export class ExerciseTypesService {
         event_type: event_type || 'training',
         club_id,
         is_system: false,
-      },
+      } as any,
       include: {
         club: {
           select: {

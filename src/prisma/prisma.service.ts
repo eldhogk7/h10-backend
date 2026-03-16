@@ -10,12 +10,13 @@ export class PrismaService
   // Expose the PrismaClient instance via a `prisma` property for backward compatibility
   public readonly prisma = this;
   constructor() {
-    const pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-    });
-
     super({
-      adapter: new PrismaPg(pool),
+      datasources: {
+        db: {
+          url: process.env.DATABASE_URL,
+        },
+      },
+      log: ['query', 'info', 'warn', 'error'],
     });
   }
 

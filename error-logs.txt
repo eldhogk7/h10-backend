@@ -5722,3 +5722,1213 @@ Foreign key constraint violated on the constraint: `activity_metrics_exrId_fkey`
 [2026-03-13T04:17:38.315Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
 [2026-03-13T04:17:46.540Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
 [2026-03-13T04:18:58.262Z] 404 - {"message":"Cannot GET /uploads/1771996351442-12730410.jpg","error":"Not Found","statusCode":404} - /uploads/1771996351442-12730410.jpg
+[2026-03-13T10:58:12.556Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T10:58:38.623Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T10:59:06.729Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T10:59:39.448Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:00:06.564Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:00:36.595Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:01:06.593Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:01:36.625Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:02:06.614Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:02:36.684Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:03:06.624Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:03:36.949Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:04:07.856Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:04:37.124Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:05:07.865Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:05:36.604Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:06:06.678Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:06:36.842Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:07:06.846Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:07:36.700Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:08:07.655Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:08:37.020Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:09:06.866Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:09:36.904Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:10:06.716Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:10:36.723Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:11:06.716Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:11:36.760Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:12:32.825Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:12:54.154Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:13:07.176Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:13:36.773Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:14:06.874Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:14:36.792Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:15:06.984Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:15:36.800Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:16:06.823Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:16:36.821Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:17:06.845Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:17:36.852Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:18:07.145Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:18:36.880Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:19:06.888Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:19:36.884Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:20:06.937Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:20:36.942Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:21:07.088Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:21:36.901Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:22:07.091Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:22:36.937Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:23:06.966Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:23:36.927Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:24:07.032Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:24:37.409Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:25:06.976Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:25:37.745Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:26:07.116Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nRaw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+Raw query failed. Code: `InvalidArg`. Message: `unknown variant `SocketTimeout`, expected one of `GenericJs`, `UnsupportedNativeDataType`, `InvalidIsolationLevel`, `LengthMismatch`, `UniqueConstraintViolation`, `NullConstraintViolation`, `ForeignKeyConstraintViolation`, `DatabaseNotReachable`, `DatabaseDoesNotExist`, `DatabaseAlreadyExists`, `DatabaseAccessDenied`, `ConnectionClosed`, `TlsConnectionError`, `AuthenticationFailed`, `TransactionWriteConflict`, `TableDoesNotExist`, `ColumnNotFound`, `TooManyConnections`, `ValueOutOfRange`, `MissingFullTextSearchIndex`, `TransactionAlreadyClosed`, `postgres`, `mysql`, `sqlite`, `mssql``
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:32:16.276Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:32:46.523Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:33:27.185Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:33:46.626Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:34:16.166Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:34:46.587Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:35:16.170Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:35:46.166Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:36:16.279Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:36:53.963Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:37:17.952Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:37:53.424Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:38:19.590Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:39:05.202Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:39:16.221Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:39:47.557Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:43:51.895Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:44:16.299Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:44:46.303Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:45:16.310Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:45:49.485Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:46:16.327Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-13T11:47:16.540Z] 500 - "\nInvalid `this.prisma.clubAdmin.findUnique()` invocation in\nD:\\jibinproject\\h10\\h10-backend\\src\\auth\\auth.service.ts:317:48\n\n  314 }\n  315 \n  316 if (payload.role === 'CLUB_ADMIN') {\n→ 317   const user = await this.prisma.clubAdmin.findUnique(\nUser was denied access on the database `postgres`" - /auth/profile
+STACK: PrismaClientKnownRequestError: 
+Invalid `this.prisma.clubAdmin.findUnique()` invocation in
+D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:48
+
+  314 }
+  315 
+  316 if (payload.role === 'CLUB_ADMIN') {
+→ 317   const user = await this.prisma.clubAdmin.findUnique(
+User was denied access on the database `postgres`
+    at ei.handleRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:174:12)
+    at ei.request (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\RequestHandler.ts:143:12)
+    at async a (D:\jibinproject\h10\h10-backend\node_modules\@prisma\client\src\runtime\getPrismaClient.ts:833:24)
+    at async AuthService.getProfileFromToken (D:\jibinproject\h10\h10-backend\src\auth\auth.service.ts:317:20)
+[2026-03-14T04:42:02.781Z] 404 - {"message":"Cannot GET /","error":"Not Found","statusCode":404} - /
+[2026-03-14T04:42:02.903Z] 404 - {"message":"Cannot GET /favicon.ico","error":"Not Found","statusCode":404} - /favicon.ico
+[2026-03-14T08:35:23.712Z] 401 - {"message":"Invalid password","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-14T08:39:11.910Z] 404 - {"message":"Cannot GET /","error":"Not Found","statusCode":404} - /
+[2026-03-14T08:39:17.003Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-14T08:39:21.088Z] 401 - {"message":"User not found","error":"Unauthorized","statusCode":401} - /auth/login
+[2026-03-14T09:09:27.396Z] 404 - {"message":"Cannot GET /","error":"Not Found","statusCode":404} - /
+[2026-03-14T09:09:27.488Z] 404 - {"message":"Cannot GET /favicon.ico","error":"Not Found","statusCode":404} - /favicon.ico
+[2026-03-16T04:37:06.115Z] 404 - {"message":"Cannot GET /uploads/7860.jpg","error":"Not Found","statusCode":404} - /uploads/7860.jpg
+[2026-03-16T04:38:50.860Z] 400 - {"message":"Some pods are already assigned or invalid","error":"Bad Request","statusCode":400} - /pod-holders
